@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="css/responsive.css">
     <!-- User style -->
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
 
     <!-- Modernizr JS -->
@@ -390,7 +391,7 @@
                         <!-- Start Single Service -->
                         <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
                             <div class="service__thumb">
-                                <img src="images/about/2.jpg" alt="about image">
+                                <img src="images/about/pelayanan-kami.png" alt="about image">
                             </div>
                         </div>
                         <!-- End Single Service -->
@@ -413,7 +414,7 @@
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
-                                                <img src="images/service/1.jpg" alt="service images">
+                                                <img src="images/service/pengurusan-skk.png" alt="service images">
                                             </a>
                                             <div class="service__hover">
                                                 <div class="service__action">
@@ -432,7 +433,7 @@
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
-                                                <img src="images/service/2.jpg" alt="service images">
+                                                <img src="images/service/pengurusan-sbu.png" alt="service images">
                                             </a>
                                             <div class="service__hover">
                                                 <div class="service__action">
@@ -451,7 +452,7 @@
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
-                                                <img src="images/service/3.jpg" alt="service images">
+                                                <img src="images/service/pengurusan-skttk.png" alt="service images">
                                             </a>
                                             <div class="service__hover">
                                                 <div class="service__action">
@@ -1054,6 +1055,28 @@
             </div>
         </section>
         <!-- End Newsletter Area -->
+
+        <section class="htc__contact__area bg__white ptb--150">
+            <div class="container">
+                <div class="row pb--100">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="htc__google__map">
+                                    <h2 class="title__line--5">LOKASI KAMI</h2>
+                                    <div class="map__contacts">
+                                        <div id="map" style="height:400px;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
         <!-- Start Contact Address -->
         <div class="htc__contact__address add-res bg__cat--1">
             <div class="container">
@@ -1220,6 +1243,22 @@
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+
+    <!-- Google Map js -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmGmeot5jcjdaJTvfCmQPfzeoG_pABeWo"></script> -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const map = L.map('map').setView([-7.2920747623061475, 112.81336571349192], 13);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        L.marker([-7.2920747623061475, 112.81336571349192])
+            .addTo(map)
+            .bindPopup('Kantor Pusat');
+    </script>
+
 
 </body>
 
