@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
@@ -31,6 +31,108 @@
     <!-- User style -->
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <style>
+        .team__details h4 {
+            color: #ffffff;
+            font-family: Open Sans;
+            font-size: 18px;
+        }
+
+        .team__details p {
+            padding-top: 5px;
+            color: #ffffff;
+        }
+
+        .timeline__horizontal {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        .timeline__horizontal::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #eee;
+            z-index: 0;
+        }
+
+        .timeline__item {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            width: 20%;
+        }
+
+        .timeline__circle {
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background: #fcc236;
+            color: #fff;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .timeline__item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .timeline__item p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Responsive mobile */
+        @media (max-width: 768px) {
+            .timeline__horizontal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline__horizontal::before {
+                display: none;
+            }
+
+            .timeline__item {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        .why__choose h3 {
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .why__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .why__list li {
+            font-size: 16px;
+            margin-bottom: 12px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .why__list i {
+            color: #ff5e14;
+            margin-right: 10px;
+            font-size: 26px;
+        }
+    </style>
 
 
     <!-- Modernizr JS -->
@@ -38,10 +140,6 @@
 </head>
 
 <body>
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
     <!-- Body main wrapper start -->
     <div class="wrapper">
         <!-- Start Header Style -->
@@ -58,11 +156,6 @@
                         </div>
                         <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                             <div class="header__top__right">
-                                <ul class="login-register">
-                                    <li><a href="login-register.html">MASUK</a></li>
-                                    <li class="separator">/</li>
-                                    <li><a href="login-register.html">DAFTAR</a></li>
-                                </ul>
                                 <div class="heaher__top__btn">
                                     <a href="#">Pesan Sekarang</a>
                                 </div>
@@ -87,87 +180,37 @@
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
                                 <ul class="main__menu">
                                     <li class="drop"><a href="index.html">BERANDA</a>
-                                        <ul class="dropdown">
-                                            <li><a href="index.html">BERANDA 01</a></li>
-                                            <li><a href="index-2.html">BERANDA 02</a></li>
-                                            <li><a href="index-3.html">BERANDA 03</a></li>
-                                        </ul>
                                     </li>
                                     <li><a href="about.html">TENTANG KAMI</a></li>
-                                    <li><a href="service.html">LAYANAN</a></li>
-                                    <li class="drop"><a href="#">HALAMAN</a>
+                                    <li class="drop"><a href="service.html">LAYANAN</a>
                                         <ul class="dropdown">
-                                            <li><a href="service.html">LAYANAN</a></li>
-                                            <li><a href="single-service.html">DETAIL LAYANAN</a></li>
-                                            <li><a href="projects-one.html">PRODUK 1</a></li>
-                                            <li><a href="projects-two.html">PRODUK 2</a></li>
-                                            <li><a href="projects-three.html">PRODUK 3</a></li>
-                                            <li><a href="single-project.html">DETAIL PRODUK</a></li>
-                                            <li><a href="blog.html">ARTIKEL</a></li>
-                                            <li><a href="blog-one-column.html">ARTIKEL KOLOM 1</a></li>
-                                            <li><a href="blog-two-column.html">ARTIKEL KOLOM 2</a></li>
-                                            <li><a href="blog-details.html">DETAIL ARTIKEL</a></li>
-                                            <li><a href="login-register.html">MASUK & DAFTAR</a></li>
+                                            <li><a href="index.html">SBU Sertifikat Badan Usaha</a></li>
+                                            <li><a href="index-2.html">SKK Sertifikat Kompetensi Kerja</a></li>
+                                            <li><a href="index-3.html">ISO & SMAP</a></li>
+                                            <li><a href="index-2.html">Pendirian Badan Usaha (PT & CV)</a></li>
+                                            <li><a href="index-3.html">Semua Layanan</a></li>
                                         </ul>
                                     </li>
-                                    <li class="drop"><a href="#">PRODUK</a>
-                                        <ul class="dropdown">
-                                            <li><a href="projects-one.html">PRODUK 1</a></li>
-                                            <li><a href="projects-two.html">PRODUK 2</a></li>
-                                            <li><a href="projects-three.html">PRODUK 3</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="drop"><a href="blog.html">ARTIKEL</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">ARTIKEL</a></li>
-                                            <li><a href="blog-one-column.html">ARTIKEL 1</a></li>
-                                            <li><a href="blog-two-column.html">ARTIKEL 2</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="drop"><a href="#artikel">ARTIKEL</a></li>
                                     <li><a href="contact.html">KONTAK</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
-                                        <li><a href="index.html">BERANDA</a>
-                                            <ul>
-                                                <li><a href="index.html">BERANDA 01</a></li>
-                                                <li><a href="index-2.html">BERANDA 02</a></li>
-                                                <li><a href="index-3.html">BERANDA 03</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a href="index.html">BERANDA</a></li>
                                         <li><a href="about.html">TENTANG KAMI</a></li>
-                                        <li><a href="#">PRODUK</a>
+                                        <li><a href="#">LAYANAN</a>
                                             <ul>
-                                                <li><a href="projects-one.html">PRODUK 1</a></li>
-                                                <li><a href="projects-two.html">PRODUK 2</a></li>
-                                                <li><a href="projects-three.html">PRODUK 3</a></li>
+                                                <li><a href="index.html">SBU Sertifikat Badan Usaha</a></li>
+                                                <li><a href="index-2.html">SKK Sertifikat Kompetensi Kerja</a></li>
+                                                <li><a href="index-3.html">ISO & SMAP</a></li>
+                                                <li><a href="index-2.html">Pendirian Badan Usaha (PT & CV)</a></li>
+                                                <li><a href="index-3.html">Semua Layanan</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="#">halaman</a>
-                                            <ul>
-                                                <li><a href="service.html">layanan</a></li>
-                                                <li><a href="single-service.html">Single layanan</a></li>
-                                                <li><a href="projects-one.html">produk one</a></li>
-                                                <li><a href="projects-two.html">produk two</a></li>
-                                                <li><a href="projects-three.html">produk three</a></li>
-                                                <li><a href="single-project.html">Single produk</a></li>
-                                                <li><a href="blog.html">Artikel</a></li>
-                                                <li><a href="blog-one-column.html">artikel one column</a></li>
-                                                <li><a href="blog-two-column.html">artikel two column</a></li>
-                                                <li><a href="blog-details.html">artikel Details</a></li>
-                                                <li><a href="login-register.html">Masuk & Daftar</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">Artikel</a></li>
-                                                <li><a href="blog-one-column.html">artikel one column</a></li>
-                                                <li><a href="blog-two-column.html">artikel two column</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">kontak</a></li>
+                                        <li><a href="blog.html">ARTIKEL</a></li>
+                                        <li><a href="contact.html">KONTAK</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -185,6 +228,7 @@
             <!-- End Mainmenu Area -->
         </div>
         <!-- End Header Style -->
+
         <!-- Start Slider Area -->
         <div class="slider__container">
             <div class="slider__activation__wrap owl-carousel owl-theme">
@@ -196,12 +240,14 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
                                 <div class="slider__inner">
-                                    <h4>SAINS 2000</h4>
-                                    <h1>JASA PENGURUSAN SERTIFIKASI & LEGALITAS RESMI</h1>
-                                    <p>Kami membantu pengurusan sertifikasi badan usaha dan tenaga kerja
-                                        secara resmi, cepat, dan sesuai regulasi.</p>
+                                    <h4>IZINKAN</h4>
+                                    <h1>SOLUSI LEGALITAS & SERTIFIKASI USAHA</h1>
+                                    <p>
+                                        Kami membantu pengurusan sertifikasi dan legalitas perusahaan secara resmi,
+                                        cepat, dan sesuai regulasi yang berlaku.
+                                    </p>
                                     <div class="slider__btn">
-                                        <a class="htc__btn" href="contact.html">HUBUNGI KAMI</a>
+                                        <a class="htc__btn" href="contact.html">KONSULTASI GRATIS</a>
                                     </div>
                                 </div>
                             </div>
@@ -212,6 +258,7 @@
                     </div>
                 </div>
                 <!-- End Single Slide -->
+
                 <!-- Start Single Slide -->
                 <div class="slide slider__fixed--height slide__align--center"
                     style="background: rgba(0, 0, 0, 0) url(images/slider/bg/2.jpg) no-repeat scroll 0 0 / cover;"
@@ -220,10 +267,11 @@
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
                                 <div class="slider__inner">
-                                    <h4>SAINS 2000</h4>
-                                    <h1>KAMI MEMBANGUN KEPERCAYAAN</h1>
-                                    <p>Kami membantu memastikan seluruh proses sertifikasi dilakukan sesuai ketentuan
-                                        yang berlaku, sehingga usaha Anda siap bersaing dan memenuhi persyaratan proyek.
+                                    <h4>MITRA LEGALITAS TERPERCAYA</h4>
+                                    <h1>KAMI MEMBANGUN KEPERCAYAAN BISNIS ANDA</h1>
+                                    <p>
+                                        Pendampingan profesional untuk SBU, SKK, ISO, dan perizinan usaha
+                                        agar perusahaan Anda siap berkembang dan patuh regulasi.
                                     </p>
                                     <div class="slider__btn">
                                         <a class="htc__btn" href="contact.html">HUBUNGI KAMI</a>
@@ -240,6 +288,7 @@
             </div>
         </div>
         <!-- Start Slider Area -->
+
         <!-- Start Offer Area -->
         <section class="htc__offer__area htc__offer--2 pb--120 bg__gray">
             <div class="container">
@@ -251,7 +300,9 @@
                             </div>
                             <div class="offer__details">
                                 <h2><a href="#">LEGAL & TERDAFTAR</a></h2>
-                                <p>Proses pengurusan sesuai regulasi dan ketentuan yang berlaku.</p>
+                                <p>
+                                    Seluruh proses pengurusan dijalankan sesuai ketentuan dan regulasi resmi.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -261,8 +312,9 @@
                                 <img src="images/others/icon-2/2.png" alt="icon images">
                             </div>
                             <div class="offer__details">
-                                <h2><a href="#">KUALITAS TERBAIK</a></h2>
-                                <p>Layanan sertifikasi dan legalitas resmi dengan proses terarah, aman, dan terpercaya.
+                                <h2><a href="#">PROSES TERARAH</a></h2>
+                                <p>
+                                    Alur pengurusan jelas, transparan, dan didampingi tim berpengalaman.
                                 </p>
                             </div>
                         </div>
@@ -273,9 +325,10 @@
                                 <img src="images/others/icon-2/3.png" alt="icon images">
                             </div>
                             <div class="offer__details">
-                                <h2><a href="#">BIAYA RENDAH</a></h2>
-                                <p>Solusi pengurusan sertifikasi dan legalitas dengan biaya terjangkau, proses efisien,
-                                    dan pendampingan profesional sesuai ketentuan yang berlaku.</p>
+                                <h2><a href="#">BIAYA TRANSPARAN</a></h2>
+                                <p>
+                                    Estimasi biaya jelas sejak awal tanpa biaya tersembunyi.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -286,16 +339,116 @@
             </div>
         </section>
         <!-- End Offer Area -->
-        <!-- Start About Area -->
-        <section class="htc__about__area about--2 text__pos ptb--150 bg__white">
+
+        <!-- Start Horizontal Timeline -->
+        <section class="htc__timeline__area ptb--120 bg__white">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title text-center">
-                            <h2 class="title__line">TENTANG <span class="text--theme">IZINKAN</span></h2>
-                            <p>IZINKAN berkomitmen menjadi mitra terpercaya dalam pengurusan sertifikasi dan legalitas
-                                yang sah, jelas, dan profesional.
+                            <h2 class="title__line">ALUR <span class="text--theme">PROSES LAYANAN</span></h2>
+                            <p>
+                                Proses pengurusan sertifikasi dijalankan secara resmi,
+                                transparan, dan terstruktur.
                             </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__horizontal mt--70">
+
+                    <div class="timeline__item">
+                        <div class="timeline__circle">1</div>
+                        <h4>Konsultasi</h4>
+                        <p>Diskusi kebutuhan usaha</p>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__circle">2</div>
+                        <h4>Dokumen</h4>
+                        <p>Persiapan berkas resmi</p>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__circle">3</div>
+                        <h4>Pengajuan</h4>
+                        <p>Proses ke lembaga terkait</p>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__circle">4</div>
+                        <h4>Monitoring</h4>
+                        <p>Pemantauan pengajuan</p>
+                    </div>
+
+                    <div class="timeline__item">
+                        <div class="timeline__circle">5</div>
+                        <h4>Sertifikat</h4>
+                        <p>Dokumen diterbitkan</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Horizontal Timeline -->
+
+        <!-- Start Why Choose Us Section -->
+        <section class="htc__why__area ptb--120 bg__gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line">KENAPA <span class="text--theme">MEMILIH KAMI</span></h2>
+                            <p>
+                                IZINKAN memberikan layanan legalitas yang profesional,
+                                transparan, dan dapat dipercaya.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt--60">
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="why__list">
+                            <li><i class="fa fa-check-circle"></i> Proses resmi sesuai regulasi pemerintah</li>
+                            <li><i class="fa fa-check-circle"></i> Estimasi waktu jelas sejak awal</li>
+                            <li><i class="fa fa-check-circle"></i> Konsultan berpengalaman</li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                        <ul class="why__list">
+                            <li><i class="fa fa-check-circle"></i> Pendampingan hingga sertifikat terbit</li>
+                            <li><i class="fa fa-check-circle"></i> Biaya transparan tanpa hidden cost</li>
+                            <li><i class="fa fa-check-circle"></i> Konsultasi awal GRATIS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Why Choose Us Section -->
+
+
+
+        <!-- Start About Area -->
+        <section id="tentang_kami" class="htc__about__area about--2 text__pos ptb--150 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line">TENTANG <span class="text--theme">KAMI</span></h2>
+                            <P>IZINKAN adalah perusahaan konsultan legalitas dan sertifikasi usaha yang membantu
+                                perusahaan
+                                di seluruh Indonesia mendapatkan izin dan sertifikasi secara resmi, cepat, dan terarah.
+                            </P>
+
+                            <P>Kami fokus pada pengurusan SBU, SKK, ISO, dan pendirian badan usaha dengan pendekatan
+                                profesional dan transparan.</P>
+
+                            <P>Dengan pengalaman menangani ratusan klien dari berbagai sektor industri, tim kami
+                                memastikan
+                                setiap proses berjalan sesuai regulasi terbaru sehingga klien dapat fokus mengembangkan
+                                bisnis tanpa hambatan administratif.</P>
                         </div>
                     </div>
                 </div>
@@ -304,8 +457,10 @@
                         <div class="about foo">
                             <div class="about__inner">
                                 <h2><a href="about.html">KISAH KAMI</a></h2>
-                                <p>IZINKAN hadir untuk menyederhanakan pengurusan sertifikasi dan legalitas secara resmi
-                                    dan terarah.</p>
+                                <p>
+                                    IZINKAN dibangun untuk menyederhanakan proses sertifikasi dan
+                                    legalitas usaha secara profesional.
+                                </p>
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -315,8 +470,10 @@
                             </div>
                             <div class="about__inner about__hober__info">
                                 <h2><a href="about.html">KISAH KAMI</a></h2>
-                                <p>IZINKAN hadir untuk menyederhanakan pengurusan sertifikasi dan legalitas secara resmi
-                                    dan terarah.</p>
+                                <p>
+                                    IZINKAN dibangun untuk menyederhanakan proses sertifikasi dan
+                                    legalitas usaha secara profesional.
+                                </p>
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -326,12 +483,15 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
                         <div class="about foo">
                             <div class="about__inner">
                                 <h2><a href="about.html">TENTANG KAMI</a></h2>
-                                <p>IZINKAN adalah mitra pengurusan SKK, SBU, SKTTK, dan SBUJPTL dengan proses sah,
-                                    jelas, dan sesuai regulasi.</p>
+                                <p>
+                                    Mitra pengurusan SKK, SBU, SKTTK, dan SBUJPTL
+                                    yang sah dan sesuai regulasi.
+                                </p>
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -341,8 +501,10 @@
                             </div>
                             <div class="about__inner about__hober__info active">
                                 <h2><a href="about.html">TENTANG KAMI</a></h2>
-                                <p>IZINKAN adalah mitra pengurusan SKK, SBU, SKTTK, dan SBUJPTL dengan proses sah,
-                                    jelas, dan sesuai regulasi.</p>
+                                <p>
+                                    Mitra pengurusan SKK, SBU, SKTTK, dan SBUJPTL
+                                    yang sah dan sesuai regulasi.
+                                </p>
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -352,11 +514,16 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="col-md-4 col-lg-3 hidden-sm col-xs-12">
                         <div class="about foo">
                             <div class="about__inner">
                                 <h2><a href="about.html">SERTIFIKAT KAMI</a></h2>
-                                <p>Setiap layanan dijalankan sesuai ketentuan resmi dan dapat dipertanggungjawabkan.</p>
+                                <p>
+                                    Setiap layanan dijalankan sesuai ketentuan resmi
+                                    dan dapat dipertanggungjawabkan.
+                                </p>
+
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -366,7 +533,10 @@
                             </div>
                             <div class="about__inner about__hober__info">
                                 <h2><a href="about.html">SERTIFIKAT KAMI</a></h2>
-                                <p>Setiap layanan dijalankan sesuai ketentuan resmi dan dapat dipertanggungjawabkan.</p>
+                                <p>
+                                    Setiap layanan dijalankan sesuai ketentuan resmi
+                                    dan dapat dipertanggungjawabkan.
+                                </p>
                                 <div class="about__btn">
                                     <a href="about.html">SELENGKAPNYA</a>
                                 </div>
@@ -391,7 +561,7 @@
                         <!-- Start Single Service -->
                         <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
                             <div class="service__thumb">
-                                <img src="images/about/pelayanan-kami.png" alt="about image">
+                                <img src="images/about/pelayanan-kami.jpg" alt="about image">
                             </div>
                         </div>
                         <!-- End Single Service -->
@@ -400,11 +570,10 @@
                                 <div class="col-xs-12">
                                     <div class="section__title text-left">
                                         <h2 class="title__line">PELAYANAN <span class="text--theme">KAMI</span></h2>
-                                        <p>IZINKAN menyediakan layanan pengurusan sertifikasi dan legalitas usaha secara
-                                            resmi dan terarah.
-                                            Kami menangani SKK, SBU, SKTTK, dan SBUJPTL sesuai regulasi yang berlaku.
-                                            Proses transparan, pendampingan jelas, dan hasil dapat
-                                            dipertanggungjawabkan.</p>
+                                        <p>
+                                            IZINKAN menyediakan layanan pengurusan sertifikasi dan legalitas usaha
+                                            secara resmi, transparan, dan terarah.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -472,16 +641,17 @@
                 </div>
             </div>
         </section>
-        <!-- End About Area -->
+
         <!-- Start Latest Project Area -->
         <section class="htc__latest__project__area ptb--150 bg__white text__pos">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title text-center">
-                            <h2 class="title__line">PROYEK <span class="text--theme">SUDAH DIKERJAKAN</span></h2>
-                            <p>Dokumentasi proyek dan layanan pengurusan sertifikasi serta legalitas yang telah
-                                diselesaikan oleh IZINKAN.
+                            <h2 class="title__line">LEGALITAS <span class="text--theme">TELAH DITANGANI</span></h2>
+                            <p>
+                                Dokumentasi layanan pengurusan sertifikasi dan legalitas
+                                yang telah diselesaikan oleh IZINKAN.
                             </p>
                         </div>
                     </div>
@@ -497,8 +667,8 @@
                                     </a>
                                     <div class="project__hover__info">
                                         <div class="project__action">
-                                            <h2><a href="single-project.html">CONSTRUCTION</a></h2>
-                                            <h4>DURATION : 6 MONTH</h4>
+                                            <h2><a href="single-project.html">PENGURUSAN SBU</a></h2>
+                                            <h4>SERTIFIKAT TERBIT</h4>
                                         </div>
                                     </div>
                                 </div>
@@ -573,7 +743,7 @@
                 </div>
             </div>
             <div class="text__shape">
-                <h2>PROJECTS</h2>
+                <h2>LEGALITAS</h2>
             </div>
         </section>
         <!-- End Latest Project Area -->
@@ -588,13 +758,14 @@
                     </div>
                     <div class="col-md-8 col-sm-12 col-xs-12">
                         <div class="htc__callto__action">
-                            <h2># PAKET <span class="text--theme">PRODUK</span> TERBAIK</h2>
-                            <p>Paket ini mencakup konsultasi awal GRATIS untuk memahami kebutuhan sertifikasi Anda,
-                                pengurusan 1 jenis sertifikasi (SKK, SBU, SKTTK, atau SBUJPTL), serta pendampingan
-                                dokumen sesuai ketentuan yang berlaku. Seluruh proses dijalankan secara resmi, terarah,
-                                dan dapat dipertanggungjawabkan.</p>
+                            <h2># PAKET <span class="text--theme">LAYANAN</span> TERBAIK</h2>
+                            <p>
+                                Dapatkan solusi pengurusan sertifikasi dan legalitas usaha
+                                dengan proses resmi, terarah, dan didampingi tim profesional.
+                                Konsultasi awal GRATIS untuk memahami kebutuhan usaha Anda.
+                            </p>
                             <div class="htc__call__btn">
-                                <a class="htc__btn" href="#">PESAN SEKARANG</a>
+                                <a class="htc__btn" href="#">KONSULTASI GRATIS</a>
                             </div>
                         </div>
                         <div class="htc__counterup__wrap"
@@ -608,7 +779,7 @@
                                         </div>
                                     </div>
                                     <div class="fact__title">
-                                        <h2>PROJECTS</h2>
+                                        <h2>PENGURUSAN SELESAI</h2>
                                     </div>
                                 </div>
                             </div>
@@ -622,7 +793,7 @@
                                         </div>
                                     </div>
                                     <div class="fact__title">
-                                        <h2>CLIENTS</h2>
+                                        <h2>KLIEN TERLAYANI</h2>
                                     </div>
                                 </div>
                             </div>
@@ -636,7 +807,7 @@
                                         </div>
                                     </div>
                                     <div class="fact__title">
-                                        <h2>SUCCESS</h2>
+                                        <h2>LEGALITAS TERBIT</h2>
                                     </div>
                                 </div>
                             </div>
@@ -650,7 +821,7 @@
                                         </div>
                                     </div>
                                     <div class="fact__title">
-                                        <h2>AWARDS</h2>
+                                        <h2>MITRA KERJA</h2>
                                     </div>
                                 </div>
                             </div>
@@ -667,11 +838,11 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title text-center">
-                            <h2 class="title__line">TIM <span class="text--theme">IZNKAN</span></h2>
+                            <h2 class="title__line">TIM <span class="text--theme">IZINKAN</span></h2>
                             <p>Tim IZINKAN terdiri dari tenaga profesional yang memahami proses sertifikasi dan
                                 legalitas.
                                 Kami bekerja secara terarah, teliti, dan sesuai regulasi yang berlaku.
-                                Komitmen kami adalah memberikan pendampingan terbaik hingg
+                                Komitmen kami adalah memberikan pendampingan terbaik hingga
                             </p>
                         </div>
                     </div>
@@ -699,7 +870,8 @@
                                 </div>
                                 <div class="team__details">
                                     <h2><a href="#">STAWART SMITH</a></h2>
-                                    <h4>Chief Engineer</h4>
+                                    <h4>Direktur</h4>
+                                    <p>Penanggung jawab operasional dan kebijakan perusahaan</p>
                                 </div>
                             </div>
                         </div>
@@ -725,7 +897,8 @@
                                 </div>
                                 <div class="team__details">
                                     <h2><a href="#">KALVIN MOMEN</a></h2>
-                                    <h4>KALVIN MOMEN</h4>
+                                    <h4>Konsultan Legalitas Usaha</h4>
+                                    <p>Analisis kebutuhan perizinan dan legalitas klien</p>
                                 </div>
                             </div>
                         </div>
@@ -751,7 +924,8 @@
                                 </div>
                                 <div class="team__details">
                                     <h2><a href="#">ANDREW SIMONS</a></h2>
-                                    <h4>Chief Electicians</h4>
+                                    <h4>Spesialis Sertifikasi</h4>
+                                    <p>Pengurusan SBU, SKK, dan sertifikasi usaha</p>
                                 </div>
                             </div>
                         </div>
@@ -777,7 +951,8 @@
                                 </div>
                                 <div class="team__details">
                                     <h2><a href="#">MARK TAYLOR</a></h2>
-                                    <h4>Chief Engineer</h4>
+                                    <h4>Administrasi & Dokumen</h4>
+                                    <p>Pengelolaan dokumen dan proses administrasi</p>
                                 </div>
                             </div>
                         </div>
@@ -859,12 +1034,10 @@
                         <div class="reguest__quote">
                             <div class="section__title text-left">
                                 <h2 class="title__line">PERMINTAAN <span class="text--theme">PENAWARAN</span></h2>
-                                <p>Ajukan permintaan penawaran layanan sertifikasi dan legalitas perusahaan Anda melalui
-                                    Iznkan.
-                                    Isi formulir singkat kami, dan tim profesional kami akan segera menyiapkan penawaran
-                                    yang sesuai kebutuhan bisnis Anda.
-                                    Proses cepat, transparan, dan terpercaya untuk mendukung kepastian hukum perusahaan
-                                    Anda.</p>
+                                <p>
+                                    Konsultasikan kebutuhan sertifikasi dan legalitas usaha Anda bersama IZINKAN.
+                                    Tim kami siap memberikan solusi terbaik sesuai kebutuhan bisnis Anda.
+                                </p>
                             </div>
                             <form id="contact-form"
                                 action="https://d29u17ylf1ylz9.cloudfront.net/simply-construction/mail-faq.php"
@@ -895,13 +1068,14 @@
             </div>
         </section>
         <!-- End Testimonial Area -->
+
         <!-- Start Blog Area -->
-        <section class="htc__blog__area pt--150 bg__white">
+        <section id="artikel" class="htc__blog__area pt--150 bg__white">
             <div class="container">
                 <div class="row">
                     <div class="section__title text-center">
                         <h2 class="title__line">ARTIKEL <span class="text--theme">TERBARU</span></h2>
-                        <p>Temukan informasi terbaru seputar sertifikasi dan legalitas perusahaan dari Iznkan.
+                        <p>Temukan informasi terbaru seputar sertifikasi dan legalitas perusahaan dari Izinkan.
                             Kami membagikan tips, panduan, dan update regulasi untuk membantu bisnis Anda tetap patuh
                             hukum dan profesional.
                             Baca artikel-artikel kami dan temukan solusi praktis untuk kebutuhan legal dan sertifikasi
@@ -919,15 +1093,15 @@
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
+                                            <li>By : <a href="#">A. Ripai</a></li>
+                                            <li>15 Februari</li>
+                                            <li><a href="#">Komentar 5</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="blog__details">
-                                    <h2><a href="blog-details.html">Lorem ipsum dolor sit amet, cotur adipiscing elit,
-                                            sed do eiusmod </a></h2>
+                                    <h2><a href="blog-details.html">Jasa Legalitas PMA untuk Investor: Memulai Bisnis
+                                            Anda dengan Mudah dan Terpercaya </a></h2>
                                     <div class="blog__btn">
                                         <a href="blog-details.html">SELENGKAPNYA<i
                                                 class="zmdi zmdi-long-arrow-right"></i></a>
@@ -945,15 +1119,15 @@
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
+                                            <li>By : <a href="#">A. Ripai</a></li>
+                                            <li>15 Februari</li>
+                                            <li><a href="#">Komentar 5</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="blog__details">
-                                    <h2><a href="blog-details.html">Lorem ipsum dolor sit amet, cotur adipiscing elit,
-                                            sed do eiusmod </a></h2>
+                                    <h2><a href="blog-details.html">Apa Itu Legalitas Yayasan dan Fungsinya? Menjadi
+                                            Kunci Keberhasilan Organisasi Sosial </a></h2>
                                     <div class="blog__btn">
                                         <a href="blog-details.html">SELENGKAPNYA<i
                                                 class="zmdi zmdi-long-arrow-right"></i></a>
@@ -971,15 +1145,15 @@
                                     </a>
                                     <div class="blog__hover__info">
                                         <ul class="blog__meta">
-                                            <li>By : <a href="#">Kalvin</a></li>
-                                            <li>20 July</li>
-                                            <li><a href="#">Comments 5</a></li>
+                                            <li>By : <a href="#">A. Ripai</a></li>
+                                            <li>15 Februari</li>
+                                            <li><a href="#">Komentar 5</a></li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="blog__details">
-                                    <h2><a href="blog-details.html">Lorem ipsum dolor sit amet, cotur adipiscing elit,
-                                            sed do eiusmod </a></h2>
+                                    <h2><a href="blog-details.html">Mengapa Jasa Perizinan Usaha Bidang Kesehatan Sangat
+                                            Dibutuhkan?</a></h2>
                                     <div class="blog__btn">
                                         <a href="blog-details.html">SELENGKAPNYA<i
                                                 class="zmdi zmdi-long-arrow-right"></i></a>
@@ -1089,7 +1263,8 @@
                                     <i class="zmdi zmdi-pin"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p>Stock Building, 125 Main Street <br>1st Lane, San Francisco, USA</p>
+                                    <p>Grand Eastern Surabaya, Keputih, No. D-16<br>Kec. Sukolilo, Surabaya, Jawa Timur
+                                        60111</p>
                                 </div>
                             </div>
                             <!-- End Single Address -->
@@ -1099,8 +1274,8 @@
                                     <i class="fa fa-globe" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">info@example.com</a></p>
-                                    <p><a href="#">www.example.com</a></p>
+                                    <p><a href="#">info@izinkan.co.id</a></p>
+                                    <p><a href="#">www.izinkan.com</a></p>
                                 </div>
                             </div>
                             <!-- End Single Address -->
@@ -1121,6 +1296,7 @@
             </div>
         </div>
         <!-- End Contact Address -->
+
         <!-- Start Footer Area -->
         <footer class="htc__footer__area">
             <div class="footer__top ptb--130" data--1f2d30__overlay="9.5"
@@ -1135,10 +1311,11 @@
                                         <h2 class="ft__title">TENTANG KAMI</h2>
                                     </div>
                                     <div class="ft__details">
-                                        <p>PT Bukamas Izin Indonesia (Iznkan) adalah perusahaan yang bergerak di bidang
+                                        <p>PT Bukamas Izin Indonesia (Izinkan) adalah perusahaan yang bergerak di bidang
                                             sertifikasi dan legalitas perusahaan. Kami berkomitmen membantu bisnis Anda
                                             memenuhi standar hukum dan regulasi secara cepat dan tepat. Dengan
-                                            pengalaman dan profesionalisme, Iznkan menjadi mitra terpercaya untuk segala
+                                            pengalaman dan profesionalisme, Izinkan menjadi mitra terpercaya untuk
+                                            segala
                                             kebutuhan legal dan sertifikasi perusahaan Anda.</p>
                                     </div>
                                 </div>
@@ -1211,6 +1388,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="copyright bg__theme">
                 <div class="container">
                     <div class="row">
@@ -1224,6 +1402,7 @@
                     </div>
                 </div>
             </div>
+
         </footer>
         <!-- End Footer Area -->
     </div>
