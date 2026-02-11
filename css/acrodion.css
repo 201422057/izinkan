@@ -1,0 +1,242 @@
+/* Accordions
+-------------------------------------------------------------- */
+.themesflat-accordions .accordion-item {
+    margin-bottom: 10px;
+}
+
+.themesflat-accordions.style-4 .accordion-item {
+    margin-bottom: 6px;
+}
+
+.themesflat-accordions .accordion-item:last-child {
+    margin-bottom: 0px;
+}
+
+.themesflat-accordions .accordion-item .accordion-heading {
+    position: relative;
+    margin-bottom: 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.themesflat-accordions .accordion-item .accordion-heading>.inner {
+    display: block;
+    position: relative;
+}
+
+.themesflat-accordions .accordion-item .accordion-content {
+    display: none;
+}
+
+/* Has icon */
+.themesflat-accordions.has-icon .accordion-item .accordion-heading>.inner:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.themesflat-accordions.has-icon.icon-left .accordion-item .accordion-heading>.inner {
+    padding: 0px 0px 0px 34px;
+}
+
+.themesflat-accordions.has-icon.icon-left.iconstyle-2 .accordion-item .accordion-heading>.inner {
+    padding: 0px 0px 0px 64px;
+}
+
+.themesflat-accordions.has-icon.iconstyle-1 .accordion-item .accordion-heading>.inner:before {
+    content: "\e906";
+    font-family: "autoraicon";
+    font-size: 20px;
+}
+
+.themesflat-accordions.has-icon.iconstyle-2 .accordion-item .accordion-heading>.inner:before {
+    content: "\f067";
+    font-family: "FontAwesome";
+    color: #999;
+    font-size: 18px;
+    width: 49px;
+    height: 49px;
+    text-align: center;
+    line-height: 49px;
+    background-color: transparent;
+    border-right: 1px solid #f2f2f2;
+}
+
+.themesflat-accordions.has-icon.iconstyle-1 .accordion-item.active .accordion-heading>.inner:before {
+    color: #ffc30c;
+}
+
+.themesflat-accordions.has-icon.iconstyle-2 .accordion-item.active .accordion-heading>.inner:before {
+    content: "\f068";
+    color: #fff;
+    background-color: #ffc30c;
+    border-color: #ffc30c;
+}
+
+.themesflat-accordions.has-icon.icon-right .accordion-item .accordion-heading>.inner:before {
+    left: auto;
+    right: 0;
+}
+
+/* Style 1 */
+.themesflat-accordions.style-1 .accordion-item {
+    padding: 13px 0px;
+    border: 1px solid #f2f2f2;
+    background-color: transparent;
+}
+
+.themesflat-accordions.style-1 .accordion-item.active {
+    padding: 22px 0px 20px 0px;
+}
+
+.themesflat-accordions.style-1 .accordion-item .accordion-heading {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    padding: 0px 22px;
+}
+
+.themesflat-accordions.style-1 .accordion-item .accordion-content {
+    padding-left: 56px;
+    padding-top: 13px;
+    line-height: 26px;
+    letter-spacing: -0.07px;
+}
+
+.themesflat-accordions.style-1 .accordion-item.active {
+    background-color: #fafafb;
+}
+
+.themesflat-accordions.style-1 .accordion-item.active .accordion-heading {
+    color: #222;
+}
+
+/* Style 2 */
+.themesflat-accordions.style-2 .accordion-item .accordion-heading {
+    font-size: 14px;
+    color: #777;
+    text-transform: uppercase;
+    padding: 0px 0px;
+    border: 1px solid #f2f2f2;
+    background-color: transparent;
+}
+
+.themesflat-accordions.style-2 .accordion-item .accordion-heading {
+    padding: 13px 0px 14px 0px;
+}
+
+.themesflat-accordions.style-2 .accordion-item.active .accordion-heading {
+    color: #222;
+}
+
+.themesflat-accordions.style-2 .accordion-content {
+    padding: 11px 0px 6px 0px;
+    letter-spacing: 0.1px;
+    line-height: 26px;
+}
+
+/* Style 3 */
+.themesflat-accordions.style-3 .accordion-item .accordion-heading {
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+    border: 1px solid #f2f2f2;
+    background-color: transparent;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 11px 0px;
+}
+
+.themesflat-accordions.style-3 .accordion-item.active .accordion-heading {
+    background-color: #fafafb;
+    color: #222;
+    font-weight: 600;
+}
+
+.themesflat-accordions.style-3.has-icon.icon-left.iconstyle-2 .accordion-item .accordion-heading>.inner {
+    padding: 0px 0px 0px 67px;
+}
+
+.themesflat-accordions.style-3 .accordion-content {
+    background-color: #fafafb;
+    padding: 6px 10px 8px 19px;
+    font-weight: 300;
+    color: #777;
+    margin-top: 4px;
+    border: 1px solid #f2f2f2;
+    line-height: 26px;
+    letter-spacing: 0.1px;
+}
+
+/* Style 4 */
+.themesflat-accordions.style-4 .accordion-item .accordion-heading {
+    font-size: 16px;
+    color: #777;
+    font-weight: 500;
+    border: 1px solid #f2f2f2;
+    background-color: #fafafb;
+    text-transform: uppercase;
+    padding: 13px 23px;
+}
+
+.themesflat-accordions.style-4 .accordion-item.active .accordion-heading {
+    background-color: #ffc30c;
+    border-color: #ffc30c;
+    color: #fff;
+}
+
+.themesflat-accordions.style-4 .accordion-content {
+    border: 1px solid #f2f2f2;
+    padding: 22px 5px 22px 24px;
+}
+
+.themesflat-accordions.style-4.has-icon.icon-right .accordion-item .accordion-heading>.inner:before {
+    color: #999;
+    font-size: 30px;
+    right: 0px;
+}
+
+.themesflat-accordions.style-4.has-icon.icon-right .accordion-item.active .accordion-heading>.inner:before {
+    color: #fff;
+}
+
+.themesflat-accordions.style-4 .accordion-content .name {
+    font-size: 14px;
+    line-height: 24px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.themesflat-accordions.style-4 .accordion-content p {
+    margin: 0px;
+}
+
+.themesflat-accordions .accordion-item .accordion-heading:hover {
+    color: #222;
+}
+
+@media only screen and (max-width: 991px) {
+    .themesflat-accordions.style-2 .accordion-item .accordion-heading {
+        font-size: 13px;
+        padding: 6px 0px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .themesflat-accordions.style-2 .accordion-item .accordion-heading {
+        padding: 15px 0px;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .themesflat-accordions.style-2 .accordion-item .accordion-heading {
+        padding: 6px 0px;
+    }
+}
