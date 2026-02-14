@@ -14,7 +14,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-
     <!-- All css files are included here. -->
     <!-- Bootstrap fremwork main css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -137,17 +136,6 @@
             }
         }
 
-
-        /* GENERAL */
-        /* section {
-            padding: 80px 20px;
-        } */
-
-        /* .container {
-            max-width: 1100px;
-            margin: auto;
-        } */
-
         .section-title {
             text-align: center;
             font-size: 32px;
@@ -252,6 +240,10 @@
             padding-bottom: 125px;
             padding-top: 30px;
         }
+
+        .footer__link .ft__menu li a {
+            white-space: nowrap;
+        }
     </style>
 
 
@@ -279,6 +271,10 @@
                                 </a>
                             </div>
                         </div>
+                        <!-- Mobile Center Title -->
+                        <div class="mobile-title visible-xs visible-sm">
+                            IZINKAN
+                        </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
                                 <ul class="main__menu">
@@ -287,15 +283,24 @@
                                     <li><a href="about.html">TENTANG KAMI</a></li>
                                     <li class="drop"><a href="layanan.html">LAYANAN</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">SBU Sertifikat Badan Usaha</a></li>
-                                            <li><a href="index-2.html">SKK Sertifikat Kompetensi Kerja</a></li>
-                                            <li><a href="index-3.html">ISO & SMAP</a></li>
-                                            <li><a href="index-2.html">Pendirian Badan Usaha (PT & CV)</a></li>
-                                            <li><a href="index-3.html">Semua Layanan</a></li>
+                                            <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                                            <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan Usaha
+                                                    Jasa
+                                                    Konstruksi)</a></li>
+                                            <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                                            <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                                            <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                                            <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                            <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                            <li><a href="iso.html">ISO (International Organization for
+                                                    Standardization)</a></li>
+                                            <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit Keuangan
+                                                    (AKP)</a>
+                                            </li>
                                         </ul>
                                     </li>
-                                    <li class="drop"><a href="#artikel">ARTIKEL</a></li>
-                                    <li><a href="contact.html">KONTAK</a></li>
+                                    <li><a href="artikel.html">ARTIKEL</a></li>
+                                    <li><a href="kontak.html">KONTAK</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
@@ -303,24 +308,35 @@
                                     <ul>
                                         <li><a href="index.html">BERANDA</a></li>
                                         <li><a href="about.html">TENTANG KAMI</a></li>
-                                        <li><a href="#">LAYANAN</a>
+                                        <li><a href="layanan.html">LAYANAN</a>
                                             <ul>
-                                                <li><a href="index.html">SBU Sertifikat Badan Usaha</a></li>
-                                                <li><a href="index-2.html">SKK Sertifikat Kompetensi Kerja</a></li>
-                                                <li><a href="index-3.html">ISO & SMAP</a></li>
-                                                <li><a href="index-2.html">Pendirian Badan Usaha (PT & CV)</a></li>
-                                                <li><a href="index-3.html">Semua Layanan</a></li>
+                                                <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                                                <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan
+                                                        Usaha
+                                                        Jasa
+                                                        Konstruksi)</a></li>
+                                                <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                                                <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                                                <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                                                <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                                <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                                <li><a href="iso.html">ISO (International Organization for
+                                                        Standardization)</a></li>
+                                                <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit
+                                                        Keuangan
+                                                        (AKP)</a>
+                                                </li>
                                             </ul>
                                         </li>
-                                        <li><a href="blog.html">ARTIKEL</a></li>
-                                        <li><a href="contact.html">KONTAK</a></li>
+                                        <li><a href="artikel.html">ARTIKEL</a></li>
+                                        <li><a href="kontak.html">KONTAK</a></li>
                                     </ul>
                                 </nav>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-6 hidden-xs">
                             <div class="htc__header__search">
-                                <input type="text" placeholder="SEARCH">
+                                <input type="text" placeholder="PENCARIAN">
                                 <a href="#"><i class="fa fa-search"></i></a>
                             </div>
                         </div>
@@ -464,12 +480,6 @@
             </div>
         </section>
 
-
-
-
-
-
-
         <!-- Start Construction Area -->
         <section class="htc__best__construction pb--150">
             <div class="container">
@@ -595,15 +605,8 @@
                                     <p>Penerbitan KTA KADIN dan sertifikasi badan usaha sektor perdagangan & jasa
                                         lainnya.</p>
                                 </div>
-
                             </div>
-
-
-
                         </div>
-                        <!-- <div class="htc__bst__btn text-center mt--30">
-                            <a class="htc__btn" href="about.html">Konsultasi Gratis</a>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -618,11 +621,7 @@
             <div class="row">
                 <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12">
                     <div class="offer">
-                        <!-- <div class="offer__icon">
-                            <img src="images/others/icon-2/1.png" alt="icon images">
-                        </div> -->
                         <div class="offer__details">
-                            <!-- <h2><a href="#">LEGAL & TERDAFTAR</a></h2> -->
                             <h2>
                                 Masih Bingung Soal <span class="text--theme">SBU</span>?
                             </h2>
@@ -630,42 +629,11 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="col-md-4 col-lg-4 col-sm-6 col-xs-12 xmt-40">
-                    <div class="offer separator">
-                        <div class="offer__icon">
-                            <img src="images/others/icon-2/2.png" alt="icon images">
-                        </div>
-                        <div class="offer__details">
-                            <h2><a href="#">BIAYA TRANSPARAN</a></h2>
-                            <p>
-                                Estimasi biaya jelas sejak awal tanpa biaya tersembunyi.
-                            </p>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-md-4 col-lg-4 hidden-sm col-xs-12 xmt-40">
-                    <div class="offer separator">
-                        <div class="offer__icon">
-                            <img src="images/others/icon-2/3.png" alt="icon images">
-                        </div>
-                        <div class="offer__details">
-                            <h2><a href="#">LOW COST</a></h2>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are</p>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
                 <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12 xmt-40">
                     <div class="offer separator">
 
                         <div class="themesflat-spacer clearfix" data-desktop="38" data-mobile="35" data-smobile="35">
                         </div>
-                        <!-- <div class="themesflat-headings style-2 clearfix">
-                            <h2 class="heading">OUR CORE VALUES</h2>
-                            <div class="sep has-width w80 accent-bg clearfix"></div>
-                        </div> -->
                         <div class="themesflat-spacer clearfix" data-desktop="35" data-mobile="35" data-smobile="35">
                         </div>
                         <div class="themesflat-content-box" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
@@ -714,11 +682,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </section>
     <!-- End Offer Area -->
@@ -885,11 +848,9 @@
             <div class="row">
                 <div class="col-xs-12">
                     <ul class="brand__list">
-                        <li><img src="images/brand/1.jpg" alt="brand images"></li>
-                        <li><img src="images/brand/2.jpg" alt="brand images"></li>
-                        <li><img src="images/brand/3.jpg" alt="brand images"></li>
-                        <!-- <li><a href="#"><img src="images/brand/4.jpg" alt="brand images"></a></li>
-                        <li><a href="#"><img src="images/brand/5.jpg" alt="brand images"></a></li> -->
+                        <li><img src="images/brand/logo_lpjk.jpg" alt="brand images"></li>
+                        <li><img src="images/brand/logo_kadin.jpg" alt="brand images"></li>
+                        <li><img src="images/brand/logo_oss.jpg" alt="brand images"></li>
                     </ul>
                 </div>
             </div>
@@ -942,8 +903,8 @@
                                 <i class="fa fa-phone" aria-hidden="true"></i>
                             </div>
                             <div class="ht__address__details">
-                                <p><a href="#">(001) 24568 365 987</a></p>
-                                <p><a href="#">(001) 65897 569 784</a></p>
+                                <p><a href="#">(62) 082298105257</a></p>
+                                <!-- <p><a href="#">(001) 65897 569 784</a></p> -->
                             </div>
                         </div>
                         <!-- End Single Address -->
@@ -986,17 +947,14 @@
                                 </div>
                                 <div class="footer__link">
                                     <ul class="ft__menu">
-                                        <li><a href="service.html">Layanan</a></li>
-                                        <li><a href="projects-one.html">Produk</a></li>
-                                        <li><a href="#">Fitur</a></li>
-                                        <li><a href="blog.html">artikel</a></li>
-                                    </ul>
-                                    <ul class="ft__menu">
+                                        <li><a href="layanan.html">Layanan</a></li>
+                                        <li><a href="artikel.html">Artikel</a></li>
+                                        <li><a href="kontak.html">Kontak</a></li>
                                         <li><a href="#">Pertanyaan</a></li>
-                                        <li><a href="projects-one.html">Produk</a></li>
-                                        <li><a href="contact.html">Kontak</a></li>
-                                        <li><a href="#">Semua Fitur</a></li>
                                     </ul>
+                                    <!-- <ul class="ft__menu">
+                                        <li><a href="layanan.html">Semua Layanan</a></li>
+                                    </ul> -->
                                 </div>
                             </div>
                         </div>
@@ -1025,16 +983,16 @@
                                     <h2 class="ft__title">PERTANYAAN</h2>
                                     <div class="footer__link">
                                         <ul class="ft__menu">
-                                            <li><a href="#">SKK</a></li>
-                                            <li><a href="#">SBU</a></li>
-                                            <li><a href="#">SKTTK</a></li>
-                                            <li><a href="#">SBUJPTL</a></li>
+                                            <li><a href="skk.html">SKK</a></li>
+                                            <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK</a></li>
+                                            <li><a href="iso.html">ISO</a></li>
+                                            <li><a href="akuntan-publik.html">Akuntan Publik</a></li>
                                         </ul>
                                         <ul class="ft__menu">
-                                            <li><a href="#">Lorem 1</a></li>
-                                            <li><a href="#">Lorem 2</a></li>
-                                            <li><a href="#">Lorem 3</a></li>
-                                            <li><a href="#">Lorem 4</a></li>
+                                            <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                            <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                            <li><a href="sbu-kelistrikan.html">SBU KELISTRIKAN</a></li>
+                                            <li><a href="serkom-kelistrikan.html">SERKOM KELISTRIKAN</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1059,7 +1017,6 @@
                 </div>
             </div>
         </div>
-
     </footer>
     <!-- End Footer Area -->
     </div>
@@ -1105,16 +1062,12 @@
         });
     </script>
 
-<a href="https://wa.me/62082298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20SERTIFIKAT." class="cs-float"
-        target="_blank">
+    <a href="https://wa.me/6282298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20SERTIFIKAT."
+        class="cs-float" target="_blank">
 
         <img src="./images/logo/customer.png" alt="Customer Service" class="cs-img">
 
-    </a>    
-
-
+    </a>
 </body>
-
-
 
 </html>

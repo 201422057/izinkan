@@ -1,0 +1,1182 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>SKK || Izinkan</title>
+    <meta name="description"
+        content="Jasa pengurusan SBU Jasa Konstruksi, Konsultan, Spesialis & SBUJPTL resmi LPJK dan OSS RBA. Proses cepat, aman, dan terpercaya bersama IZINKAN. Konsultasi gratis!">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- All css files are included here. -->
+    <!-- Bootstrap fremwork main css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl Carousel  main css -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <!-- This core.css file contents all plugings css file. -->
+    <link rel="stylesheet" href="css/core.css">
+    <!-- Theme shortcodes/elements style -->
+    <link rel="stylesheet" href="css/shortcode/shortcodes.css">
+    <!-- Theme main style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Responsive css -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- User style -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/acrodion.css">
+    <style>
+        .single__mission ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .single__mission li {
+            display: flex;
+            gap: 10px;
+            /* Jarak antara nomor dan teks */
+            margin-bottom: 8px;
+            align-items: flex-start;
+        }
+
+        .mission-no {
+            font-weight: bold;
+            min-width: 20px;
+            /* Memastikan nomor punya ruang tetap */
+        }
+
+        .single__mission i {
+            color: #fcc236;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .timeline__horizontal {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 60px;
+        }
+
+        /* Pastikan garis penghubung berada di belakang */
+        .timeline__horizontal::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            /* Sesuaikan dengan titik tengah lingkaran Anda */
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #e1e1e1;
+            /* Warna garis */
+            z-index: 1;
+            /* Angka lebih rendah dari lingkaran */
+        }
+
+        .timeline__item {
+            padding: 0 20px;
+            /* Jarak tulisan ke kanan dan kiri */
+            text-align: center;
+            float: left;
+            /* Jika timeline horizontal menggunakan float */
+            width: 20%;
+            /* Karena ada 5 item (100/5 = 20%) */
+            z-index: 2;
+        }
+
+        .timeline__circle {
+            display: flex;
+            align-items: center;
+            /* Vertikal tengah */
+            justify-content: center;
+            /* Horisontal tengah */
+            width: 60px;
+            /* Sesuaikan dengan ukuran di template Anda */
+            height: 60px;
+            /* Sesuaikan dengan ukuran di template Anda */
+            /* border-radius: 50%; */
+            margin: 0 auto 20px;
+            /* Menengahkan lingkaran itu sendiri */
+            background-color: #f5f5f5;
+            /* Contoh warna background */
+            color: #fcc236;
+            /* Contoh warna ikon (orange tema konstruksi) */
+        }
+
+        .timeline__item h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .timeline__item p {
+            font-size: 13px;
+            color: #666;
+        }
+
+        /* Responsive mobile */
+        @media (max-width: 768px) {
+            .timeline__horizontal {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline__horizontal::before {
+                display: none;
+            }
+
+            .timeline__item {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section-title span {
+            color: #fcc236;
+        }
+
+        .section-desc {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #666;
+        }
+
+
+        /* ===================== */
+        /* 1. APA ITU SBU */
+        /* ===================== */
+
+        .sbu-section {
+            background: #f9f9f9;
+        }
+
+        .sbu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .sbu-card {
+            background: #fff;
+            padding: 30px;
+            /* border-radius: 12px; */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+
+        /* ===================== */
+        /* 2. SYARAT SBU */
+        /* ===================== */
+
+        .timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .timeline-item {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .number {
+            width: 60px;
+            height: 60px;
+            background: #fcc236;
+            color: #fff;
+            /* border-radius: 50%; */
+            line-height: 60px;
+            font-size: 20px;
+            margin: 0 auto 20px;
+        }
+
+
+        /* ===================== */
+        /* 3. WHY SECTION */
+        /* ===================== */
+
+        .why-section {
+            background: #ffffff;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+        }
+
+        .why-card {
+            padding: 30px;
+            /* border-radius: 12px; */
+            background: #f4f6f9;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .why-card:hover {
+            background: #fcc236;
+            color: #fff;
+        }
+
+        .htc__brand__area {
+            padding-bottom: 20px;
+            padding-top: 126px;
+        }
+
+        .htc__brand__uud {
+            padding-bottom: 125px;
+            padding-top: 30px;
+        }
+
+        .footer__link .ft__menu li a {
+            white-space: nowrap;
+        }
+
+
+
+
+
+        /* SECTION */
+        .sbu-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fafb 100%);
+        }
+
+        .ptb--150 {
+            padding: 150px 0;
+        }
+
+        /* INTRO */
+        .sbu-intro {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 50px;
+            /* align-items: center; */
+            margin-bottom: 70px;
+        }
+
+        .sbu-text h2 {
+            /* margin-bottom: 16px;
+  line-height: 1.7;
+  color: #ff0000; */
+
+            color: #1f2d30;
+            font-size: 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .sbu-text p {
+            margin-bottom: 16px;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        /* BULLET */
+        .sbu-points {
+            margin-top: 20px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .sbu-points li {
+            position: relative;
+            padding-left: 26px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .sbu-points li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #f5b400;
+            /* warna theme */
+            font-weight: bold;
+        }
+
+        /* VISUAL */
+        .sbu-visual img {
+            max-width: 100%;
+            /* border-radius: 20px; */
+        }
+
+        /* GRID CARD */
+        .sbu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .sbu-card {
+            background: #fff;
+            padding: 30px;
+            /* border-radius: 16px; */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .sbu-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .sbu-card h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .sbu-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .sbu-intro {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .sbu-points li {
+                text-align: left;
+            }
+
+            .sbu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+
+    <!-- Modernizr JS -->
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+    <!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Body main wrapper start -->
+    <div class="wrapper">
+        <!-- Start Header Style -->
+        <div id="header" class="htc-header">
+            <!-- Start Mainmenu Area -->
+            <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-2 col-sm-6 col-xs-7">
+                            <div class="logo">
+                                <a href="index.html">
+                                    <img src="images/logo/logo-izinkan.png" alt="logo image">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Mobile Center Title -->
+                        <div class="mobile-title visible-xs visible-sm">
+                            IZINKAN
+                        </div>
+                        <div class="col-md-8 col-sm-6 col-xs-5">
+                            <nav class="main__menu__nav  hidden-xs hidden-sm">
+                                <ul class="main__menu">
+                                    <li class="drop"><a href="index.html">BERANDA</a>
+                                    </li>
+                                    <li><a href="about.html">TENTANG KAMI</a></li>
+                                    <li class="drop"><a href="layanan.html">LAYANAN</a>
+                                        <ul class="dropdown">
+                                            <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                                            <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan Usaha
+                                                    Jasa
+                                                    Konstruksi)</a></li>
+                                            <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                                            <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                                            <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                                            <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                            <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                            <li><a href="iso.html">ISO (International Organization for
+                                                    Standardization)</a></li>
+                                            <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit Keuangan
+                                                    (AKP)</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="artikel.html">ARTIKEL</a></li>
+                                    <li><a href="kontak.html">KONTAK</a></li>
+                                </ul>
+                            </nav>
+                            <div class="mobile-menu clearfix visible-xs visible-sm">
+                                <nav id="mobile_dropdown">
+                                    <ul>
+                                        <li><a href="index.html">BERANDA</a></li>
+                                        <li><a href="about.html">TENTANG KAMI</a></li>
+                                        <li><a href="layanan.html">LAYANAN</a>
+                                            <ul>
+                                                <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                                                <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan
+                                                        Usaha
+                                                        Jasa
+                                                        Konstruksi)</a></li>
+                                                <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                                                <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                                                <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                                                <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                                <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                                <li><a href="iso.html">ISO (International Organization for
+                                                        Standardization)</a></li>
+                                                <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit
+                                                        Keuangan
+                                                        (AKP)</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="artikel.html">ARTIKEL</a></li>
+                                        <li><a href="kontak.html">KONTAK</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-6 hidden-xs">
+                            <div class="htc__header__search">
+                                <input type="text" placeholder="PENCARIAN">
+                                <a href="#"><i class="fa fa-search"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mobile-menu-area"></div>
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </div>
+        <!-- End Header Style -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area" data--black__overlay="6"
+            style="background: rgba(0, 0, 0, 0) url(images/bg/izinkan-bg.jpg) no-repeat scroll center center / cover ;">
+            <div class="ht__bradcaump__wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">LAYANAN</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="index.html">BERANDA</a>
+                                    <span class="brd-separetor">-</span>
+                                    <a class="breadcrumb-item" href="index.html">LAYANAN</a>
+                                    <span class="brd-separetor">-</span>
+                                    <span class="breadcrumb-item active">SKK (Sertifikat Kompetensi Kerja)</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area -->
+
+
+
+        <!-- ============================= -->
+        <!-- 1. APA ITU SBU -->
+        <!-- ============================= -->
+        <section class="sbu-section ptb--150">
+            <div class="container">
+
+                <!-- INTRO -->
+                <div class="sbu-intro">
+                    <div class="sbu-text">
+                        <h2 class="title__line mb--20">
+                            Apa Itu <span class="text--theme">SKK (Sertifikat Kompetensi Kerja)?</span>
+                        </h2>
+
+                        <p>
+                            SKK (Sertifikat Kompetensi Kerja) adalah sertifikat resmi yang diterbitkan oleh
+                            Lembaga Sertifikasi Profesi (LSP) berlisensi BNSP sebagai bukti bahwa tenaga kerja
+                            memiliki kompetensi, keahlian, dan pengalaman kerja sesuai standar nasional di bidangnya.
+                        </p>
+
+                        <ul class="sbu-points">
+                            <li>Syarat legal tenaga ahli & tenaga terampil</li>
+                            <li>Digunakan untuk pengurusan SBU perusahaan</li>
+                            <li>Wajib dalam tender proyek pemerintah & BUMN</li>
+                            <li>Terintegrasi dengan regulasi LPJK & OSS RBA</li>
+                        </ul>
+                    </div>
+
+                    <!-- VISUAL -->
+                    <div class="sbu-visual">
+                        <!-- Ganti src dengan ilustrasi SKK / Sertifikat -->
+                        <img src="images/about/1.jpg" alt="Ilustrasi Sertifikat SKK">
+                    </div>
+                </div>
+
+                <!-- BENEFIT -->
+                <div class="sbu-grid">
+                    <div class="sbu-card">
+                        <h4>Legal & Resmi BNSP</h4>
+                        <p>Sertifikat diterbitkan oleh LSP terlisensi dan diakui secara nasional.</p>
+                    </div>
+
+                    <div class="sbu-card">
+                        <h4>Wajib untuk SBU & Tender</h4>
+                        <p>Menjadi syarat mutlak dalam pengurusan SBU dan proyek pemerintah/BUMN.</p>
+                    </div>
+
+                    <div class="sbu-card">
+                        <h4>Berlaku Nasional</h4>
+                        <p>Digunakan di seluruh wilayah Indonesia sesuai regulasi yang berlaku.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <!-- ============================= -->
+        <!-- 2. SYARAT PENGURUSAN SBU -->
+        <!-- ============================= -->
+        <section class="syarat-section ptb--150">
+            <div class="container">
+                <div class="section__title text-center">
+                    <h2 class="title__line">
+                        SYARAT PENGURUSAN <span class="text--theme">SKK</span>
+                    </h2>
+                </div>
+
+                <div class="timeline pt--20">
+                    <div class="timeline-item">
+                        <div class="number">1</div>
+                        <h4>Konsultasi Jabatan & Kualifikasi</h4>
+                        <p>Penentuan jabatan kerja dan jenjang SKK sesuai pengalaman.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="number">2</div>
+                        <h4>Persiapan Dokumen</h4>
+                        <p>KTP, NPWP, ijazah, CV, surat pengalaman kerja, dan pas foto.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="number">3</div>
+                        <h4>Pendaftaran ke LSP</h4>
+                        <p>Pengajuan data dan administrasi ke LSP terlisensi BNSP.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="number">4</div>
+                        <h4>Asesmen Kompetensi</h4>
+                        <p>Uji kompetensi melalui wawancara, portofolio, atau observasi.</p>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="number">5</div>
+                        <h4>Sertifikat Terbit</h4>
+                        <p>SKK resmi diterbitkan dan dapat digunakan untuk SBU & tender.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- ============================= -->
+        <!-- 3. KENAPA MEMILIH IZINKAN -->
+        <!-- ============================= -->
+
+        <section class="why-section pb--150">
+            <div class="container">
+                <div class="section__title text-center">
+                    <h2 class="title__line">
+                        Kenapa Mengurus <span class="text--theme">SKK</span> di IZINKAN?
+                    </h2>
+                </div>
+
+                <div class="why-grid pt--30">
+                    <div class="why-card">
+                        <h4>Tim Berpengalaman</h4>
+                        <p>Berpengalaman menangani ratusan pengurusan SKK berbagai bidang.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h4>Pendampingan Penuh</h4>
+                        <p>Dibimbing dari awal hingga sertifikat resmi terbit.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h4>Proses Cepat & Aman</h4>
+                        <p>Proses efisien sesuai standar LSP & BNSP.</p>
+                    </div>
+
+                    <div class="why-card">
+                        <h4>Transparan & Terpercaya</h4>
+                        <p>Tanpa biaya tersembunyi, jelas sejak awal.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Start Construction Area -->
+        <section class="htc__best__construction pb--150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="htc__bst__construc">
+                            <div class="section__title text-center">
+
+                                <h2 class="title__line">
+                                    <span>Urus</span> <span class="text--theme">SKK</span> Jadi Lebih Mudah & Aman
+                                    Bersama
+                                </h2>
+                                <p>Pastikan tenaga kerja Anda memiliki Sertifikat Kompetensi Kerja (SKK) resmi sesuai
+                                    regulasi terbaru. IZINKAN siap membantu pengurusan SKK secara cepat, legal, dan
+                                    terpercaya.</p>
+                            </div>
+                            <div class="htc__bst__btn text-center mt--30">
+                                <a class="htc__btn" href="about.html">Konsultasi Gratis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Construction Area -->
+        <!-- Start Offer Area -->
+        <section class="htc__mission__area bg__gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-lg-5 col-sm-7 col-xs-12">
+                        <div class="htc__mission__container">
+                            <div class="single__mission">
+                                <h2>Paket Pengurusan SKK</h2>
+                                <p>
+                                    IZINKAN menyediakan paket pengurusan SKK yang fleksibel dan disesuaikan dengan
+                                    kebutuhan individu maupun perusahaan.
+                                </p>
+                            </div>
+                            <div class="single__mission">
+                                <h2>Anda akan mendapatkan:</h2>
+                                <ul>
+                                    <li><span class="mission-no">1.</span><span>Sertifikat Kompetensi Kerja (SKK)
+                                            resmi</span></li>
+                                    <li><span class="mission-no">2.</span><span>Pendampingan asesmen hingga lulus</span>
+                                    </li>
+                                    <li><span class="mission-no">3.</span><span>Konsultasi jabatan & jenjang SKK</span>
+                                    </li>
+                                    <li><span class="mission-no">4.</span><span>Dokumen siap digunakan untuk SBU &
+                                            tender</span></li>
+                                </ul><br>
+                                <p><i class="fa fa-check-square-o"></i> Proses mudah & cepat</p>
+                                <p><i class="fa fa-check-square-o"></i> Bisa untuk kebutuhan SBU</p>
+                                <p><i class="fa fa-check-square-o"></i> Didampingi sampai sertifikat terbit</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="htc__offer__thumb">
+                <div class="htc__offer__thumb__inner">
+                    <img src="images/about/1.jpg" alt="offer img">
+                </div>
+            </div>
+        </section>
+        <!-- End Offer Area -->
+
+        <!-- Start Construction Area -->
+        <section class="htc__best__construction pt--150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="htc__bst__construc">
+                            <div class="section__title text-center">
+                                <h2 class="title__line">
+                                    Urus <span class="text--theme">SKK</span>
+                                    Lebih Mudah & Resmi Bersama IZINKAN
+                                </h2>
+                                <p>
+                                    Pastikan perusahaan dan proyek Anda memenuhi
+                                    ketentuan K3 dengan Ahli K3 Umum bersertifikat resmi.
+                                </p>
+                            </div>
+
+                            <div class="htc__bst__btn text-center mt--30">
+                                <a class="htc__btn" href="about.html">Konsultasi Gratis</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Construction Area -->
+
+
+        <!-- Start Offer Area -->
+        <section class="htc__offer__area ptb--150 bg__white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-lg-5 col-sm-6 col-xs-12">
+                        <div class="offer">
+                            <div class="offer__details">
+                                <h2>
+                                    PERTANYAAN SEPUTAR <span class="text--theme">SKK</span>?
+                                </h2>
+                                <!-- <h2>Ini Jawabannya</h2> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-7 col-lg-7 col-sm-6 col-xs-12 xmt-40">
+                        <div class="offer separator">
+
+                            <div class="themesflat-spacer clearfix" data-desktop="38" data-mobile="35"
+                                data-smobile="35">
+                            </div>
+                            <div class="themesflat-spacer clearfix" data-desktop="35" data-mobile="35"
+                                data-smobile="35">
+                            </div>
+                            <div class="themesflat-content-box" data-margin="0 0 0 0" data-mobilemargin="0 0 0 0">
+                                <div
+                                    class="themesflat-accordions style-3 has-icon icon-left iconstyle-2 our-background clearfix">
+                                    <div class="accordion-item active">
+                                        <h3 class="accordion-heading"><span class="inner">Apakah SKK wajib
+                                                dimiliki?</span></h3>
+                                        <div class="accordion-content">
+                                            <div>Ya. Untuk sektor konstruksi dan jasa terkait, SKK wajib dimiliki oleh
+                                                tenaga ahli/terampil dan menjadi syarat pengurusan SBU.</div>
+                                        </div>
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion-item">
+                                        <h3 class="accordion-heading"><span class="inner">Berapa lama proses pengurusan
+                                                SKK?</span></h3>
+                                        <div class="accordion-content">
+                                            <div>Umumnya 7–14 hari kerja, tergantung kelengkapan dokumen dan jadwal
+                                                asesmen.</div>
+                                        </div>
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion-item ">
+                                        <h3 class="accordion-heading"><span class="inner">Apakah bisa mengurus SKK tanpa
+                                                pengalaman kerja?</span>
+                                        </h3>
+                                        <div class="accordion-content">
+                                            <div>Tidak disarankan. SKK mensyaratkan pengalaman kerja yang relevan sesuai
+                                                jenjang jabatan.</div>
+                                        </div>
+                                    </div><!-- /.accordion-item -->
+                                    <div class="accordion-item ">
+                                        <h3 class="accordion-heading"><span class="inner">Apakah IZINKAN membantu
+                                                asesmen?</span></h3>
+                                        <div class="accordion-content">
+                                            <div>Ya. Kami dampingi penuh hingga proses asesmen selesai.</div>
+                                        </div>
+                                    </div><!-- /.accordion-item -->
+                                </div><!-- /.themesflat-accordion -->
+                            </div><!-- /.themesflat-content-box -->
+                            <div class="themesflat-spacer clearfix" data-desktop="80" data-mobile="60"
+                                data-smobile="60">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Offer Area -->
+
+        <!-- Start Testimonial Area -->
+        <section class="htc__testimonial__area ptb--130" data--gray__overlay="9.5"
+            style="background: rgba(0, 0, 0, 0) url(images/bg/1.jpg) no-repeat fixed center center / cover ;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-5 col-sm-12 col-xs-12">
+                        <div class="htc__testimonial__wrap">
+                            <div class="section__title text-left">
+                                <h2 class="title__line">SUARA <span class="text--theme">KLIEN</span></h2>
+                                <p>Kami selalu mengutamakan kepuasan klien. Setiap layanan diberikan dengan
+                                    profesional, cepat, dan sesuai standar yang berlaku. Testimoni mereka menjadi bukti
+                                    kualitas dan kepercayaan yang kami bangun.</p>
+                            </div>
+                            <div class="testimonial__activation clearfix">
+                                <!-- Start Single Testimonial -->
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Layanan cepat dan profesional. Tim sangat responsif dan sangat
+                                            direkomendasikan!"</p>
+                                        <h2><a href="#">Ken Williams</a></h2>
+                                        <h4>CEO, PT. Maju Sejahtera</h4>
+                                    </div>
+                                </div>
+                                <!-- End Single Testimonial -->
+                                <!-- Start Single Testimonial -->
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Proses sertifikasi jadi mudah berkat pendampingan tim ini. Jelas, tepat
+                                            waktu, dan terpercaya."</p>
+                                        <h2><a href="#">Ken Williams</a></h2>
+                                        <h4>CEO, CV. Kreatif Solusi</h4>
+                                    </div>
+                                </div>
+                                <!-- End Single Testimonial -->
+                                <!-- Start Single Testimonial -->
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Sangat puas dengan layanan mereka. Ramah, jelas, dan selalu siap menjawab
+                                            pertanyaan kami."</p>
+                                        <h2><a href="#">Ken Williams</a></h2>
+                                        <h4>CEO, PT. Sukses Mandiri</h4>
+                                    </div>
+                                </div>
+                                <!-- End Single Testimonial -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+                        <div class="reguest__quote">
+                            <div class="section__title text-left">
+                                <h2 class="title__line">Tingkatkan Keselamatan & Kepatuhan Perusahaan Anda dengan <span
+                                        class="text--theme">AK3U</span></h2>
+                                <p>Ahli K3 Umum bukan hanya formalitas, tetapi penjaga keselamatan tenaga kerja dan aset
+                                    perusahaan.
+                                    IZINKAN siap membantu pengurusan Ahli K3 Umum secara profesional, resmi, dan
+                                    terpercaya.</p>
+                            </div>
+                            <div class="htc__bst__btn text-left mt--30">
+                                <a class="htc__btn" href="about.html">Konsultasi Gratis Sekarang</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Testimonial Area -->
+
+        <!-- Start Counter Up Area -->
+        <section class="htc__counterup__area ptb--50"
+            style="background: rgba(0, 0, 0, 0) url(images/bg/3.jpg) no-repeat scroll center center / cover ;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="htc__counterup__wrap">
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">598</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>PENGURUSAN SELESAI</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">128</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>KLIEN TERLAYANI</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">339</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>LEGALITAS TERBIT</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__count ">
+                                            <span class="count">109</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>MITRA KERJA</h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Fact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Counter Up Area -->
+
+
+        <!-- Start Brand Area -->
+        <div class="htc__brand__area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="brand__list">
+                            <li><img src="images/brand/logo_lpjk.jpg" alt="brand images"></li>
+                            <li><img src="images/brand/logo_kadin.jpg" alt="brand images"></li>
+                            <li><img src="images/brand/logo_oss.jpg" alt="brand images"></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="htc__brand__uud">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 text-center">
+                        <p>Seluruh proses mengacu pada: PP No. 5 Tahun 2021 tentang OSS RBA - Permen PUPR terkait Jasa
+                            Konstruksi - Ketentuan LPJK terbaru</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Brand Area -->
+
+        <!-- Start Contact Address -->
+    <div class="htc__contact__address add-res bg__cat--1">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="htc__contact__wrap clearfix">
+                        <!-- Start Single Address -->
+                        <div class="ht__address__inner">
+                            <div class="ht__address__icon map-pin">
+                                <i class="zmdi zmdi-pin"></i>
+                            </div>
+                            <div class="ht__address__details">
+                                <p>Grand Eastern Surabaya, Keputih, No. D-16<br>Kec. Sukolilo, Surabaya, Jawa Timur
+                                    60111</p>
+                            </div>
+                        </div>
+                        <!-- End Single Address -->
+                        <!-- Start Single Address -->
+                        <div class="ht__address__inner">
+                            <div class="ht__address__icon glob">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </div>
+                            <div class="ht__address__details">
+                                <p><a href="#">info@izinkan.id</a></p>
+                                <p><a href="#">www.izinkan.id</a></p>
+                            </div>
+                        </div>
+                        <!-- End Single Address -->
+                        <!-- Start Single Address -->
+                        <div class="ht__address__inner">
+                            <div class="ht__address__icon">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="ht__address__details">
+                                <p><a href="#">(62) 082298105257</a></p>
+                                <!-- <p><a href="#">(001) 65897 569 784</a></p> -->
+                            </div>
+                        </div>
+                        <!-- End Single Address -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Contact Address -->
+
+        <!-- Start Footer Area -->
+    <footer class="htc__footer__area">
+        <div class="footer__top ptb--130" data--1f2d30__overlay="9.5"
+            style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat fixed center center / cover ;">
+            <div class="container">
+                <div class="row">
+                    <div class="htc__footer__wrap clearfix">
+                        <!-- Start Single Footer -->
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12">
+                            <div class="footer foo">
+                                <div class="footer__widget">
+                                    <h2 class="ft__title">TENTANG KAMI</h2>
+                                </div>
+                                <div class="ft__details">
+                                    <p>PT Bukamas Izin Indonesia (Izinkan) adalah perusahaan yang bergerak di bidang
+                                        sertifikasi dan legalitas perusahaan. Kami berkomitmen membantu bisnis Anda
+                                        memenuhi standar hukum dan regulasi secara cepat dan tepat. Dengan
+                                        pengalaman dan profesionalisme, Izinkan menjadi mitra terpercaya untuk
+                                        segala
+                                        kebutuhan legal dan sertifikasi perusahaan Anda.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer -->
+                        <!-- Start Single Footer -->
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 xmt-40">
+                            <div class="footer quick__link foo">
+                                <div class="footer__widget">
+                                    <h2 class="ft__title">TAUTAN CEPAT</h2>
+                                </div>
+                                <div class="footer__link">
+                                    <ul class="ft__menu">
+                                        <li><a href="layanan.html">Layanan</a></li>
+                                        <li><a href="artikel.html">Artikel</a></li>
+                                        <li><a href="kontak.html">Kontak</a></li>
+                                        <li><a href="#">Pertanyaan</a></li>
+                                    </ul>
+                                    <!-- <ul class="ft__menu">
+                                        <li><a href="layanan.html">Semua Layanan</a></li>
+                                    </ul> -->
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer -->
+                        <!-- Start Single Footer -->
+                        <div class="col-md-3 col-lg-3 col-sm-6 col-xs-12 smt-40 xmt-40">
+                            <div class="footer foo">
+                                <div class="footer__widget">
+                                    <h2 class="ft__title">INSTAGRAM</h2>
+                                </div>
+                                <ul class="footer__instagram">
+                                    <li><a href="#"><img src="images/blog/sm-img/1.jpg" alt="images"></a></li>
+                                    <li><a href="#"><img src="images/blog/sm-img/2.jpg" alt="images"></a></li>
+                                    <li><a href="#"><img src="images/blog/sm-img/3.jpg" alt="images"></a></li>
+                                    <li><a href="#"><img src="images/blog/sm-img/4.jpg" alt="images"></a></li>
+                                    <li><a href="#"><img src="images/blog/sm-img/5.jpg" alt="images"></a></li>
+                                    <li><a href="#"><img src="images/blog/sm-img/6.jpg" alt="images"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Single Footer -->
+                        <!-- Start Single Footer -->
+                        <div class="col-md-3 col-lg-2 col-lg-offset-1 col-sm-6 col-xs-12 smt-40 xmt-40">
+                            <div class="footer foo">
+                                <div class="footer__widget">
+                                    <h2 class="ft__title">PERTANYAAN</h2>
+                                    <div class="footer__link">
+                                        <ul class="ft__menu">
+                                            <li><a href="skk.html">SKK</a></li>
+                                            <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK</a></li>
+                                            <li><a href="iso.html">ISO</a></li>
+                                            <li><a href="akuntan-publik.html">Akuntan Publik</a></li>
+                                        </ul>
+                                        <ul class="ft__menu">
+                                            <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                                            <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                                            <li><a href="sbu-kelistrikan.html">SBU KELISTRIKAN</a></li>
+                                            <li><a href="serkom-kelistrikan.html">SERKOM KELISTRIKAN</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Single Footer -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright bg__theme">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="copyright__inner">
+                            <p>Copyright © 2026 <a href="#" target="_blank">PT Bukamas Izin Indonesia.</a>Seluruh
+                                hak
+                                cipta © dilindungi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer Area -->
+    </div>
+
+    <!-- Body main wrapper end -->
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+    <!-- jquery latest version -->
+    <script src="js/vendor/jquery-1.12.0.min.js"></script>
+    <!-- Bootstrap framework js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All js plugins included in this file. -->
+    <script src="js/plugins.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- Waypoints.min.js. -->
+    <script src="js/waypoints.min.js"></script>
+    <!-- Main js file that contents all jQuery plugins activation. -->
+    <script src="js/main.js"></script>
+
+    <!-- Accordion script paling terakhir -->
+    <script>
+        $(document).ready(function () {
+            var args = { duration: 300 };
+
+            $('.accordion-item.active').find('.accordion-content').show();
+
+            $('.accordion-heading').on('click', function () {
+                var parent = $(this).parent();
+
+                if (!parent.hasClass('active')) {
+                    $('.accordion-item').removeClass('active');
+                    $('.accordion-content').slideUp(args);
+
+                    parent.addClass('active');
+                    parent.find('.accordion-content').slideDown(args);
+                } else {
+                    parent.removeClass('active');
+                    parent.find('.accordion-content').slideUp(args);
+                }
+            });
+        });
+    </script>
+
+    <a href="https://wa.me/6282298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20SERTIFIKAT."
+        class="cs-float" target="_blank">
+
+        <img src="./images/logo/customer.png" alt="Customer Service" class="cs-img">
+
+    </a>
+</body>
+
+</html>

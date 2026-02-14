@@ -10,6 +10,43 @@
 	You can put your custom css code here: 
 -------------------------------------------------------*/
 
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Title tengah mobile */
+.mobile-title {
+  display: none;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+/* Aktif di mobile */
+@media (max-width: 768px) {
+
+  .mobile-title {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    pointer-events: none;
+    /* supaya tidak ganggu klik */
+  }
+
+  /* Header jadi relatif */
+  .mainmenu__wrap {
+    position: relative;
+  }
+
+}
+
 /* ============================= */
 /* FLOATING WHATSAPP BUTTON */
 /* ============================= */
