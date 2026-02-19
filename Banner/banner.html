@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konsultan Sertifikasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+body {
+    background: #eee;
+}
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    align-items: center;
+    padding: 40px 60px;
+
+    /* GANTI dengan gambar background kamu */
+    background: url("background.jpg") center / cover no-repeat;
+}
+
+/* CONTENT BOX */
+.content-box {
+    max-width: 620px;
+    padding: 40px 45px;
+    background: rgba(250, 249, 249, 0.119); /* putih transparan */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    border: 2px dashed rgba(255,255,255,0.9);
+}
+
+/* TITLE */
+.content-box h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.yellow {
+    color: #f4c430;
+}
+
+.purple {
+    color: #6a1b9a;
+}
+
+/* TEXT */
+.content-box p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+/* DOMAIN */
+.domain {
+    font-size: 14px;
+    color: #444;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .content-box {
+        max-width: 100%;
+    }
+
+    .content-box h1 {
+        font-size: 32px;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+<section class="hero">
+    <div class="content-box">
+        <h1>
+            <span class="yellow">Konsultan</span>
+            <span class="purple">Sertifikasi</span>
+        </h1>
+
+        <p>
+            <strong>IZINKAN</strong> adalah perusahaan konsultan legalitas dan
+            sertifikasi yang membantu perusahaan di seluruh Indonesia,
+            untuk mendapatkan izin dan sertifikasi secara resmi,
+            cepat, dan terarah.
+        </p>
+
+        <div class="domain">izinkan.id</div>
+    </div>
+</section>
+
+</body>
+</html>

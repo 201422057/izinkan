@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layanan Kami</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f6f8;
+        }
+
+
+        .services {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .label {
+            color: orange;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .desc {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            /* border-radius: 12px; */
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+
+        .card img {
+            width: 100%;
+            /* height: 220px; */
+            /* tinggi fix */
+            /* object-fit: contain; */
+            /* tidak terpotong */
+            display: block;
+        }
+
+        /* Gambar di atas & tengah */
+        .card>img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding-top: 3%;
+            padding-left: 3%;
+            padding-right: 3%;
+            box-sizing: border-box;
+        }
+
+        .card-body {
+            padding: 25px;
+            text-align: left;
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-body h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .card-body ul {
+            margin: 10px 0 20px;
+            padding-left: 18px;
+            color: #444;
+        }
+
+        /* Menghilangkan titik list bawaan */
+        /* .card-body ul {
+            list-style: none;
+            padding-left: 0;
+        } */
+
+        .card-body li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        /* Mengatur warna dan jarak ikon */
+        /* .card-body li i {
+            color: orange;
+            margin-right: 10px;
+        } */
+
+        /* Penyesuaian agar teks tidak berantakan jika panjang */
+        /* .card-body li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        } */
+
+        .btn {
+            /* display: inline-block; */
+            display: block;
+            background: orange;
+            color: black;
+            padding: 12px 20px;
+            /* border-radius: 6px; */
+            text-decoration: none;
+            font-weight: bold;
+
+            width: 100%;
+            /* tombol selebar card */
+            margin-top: auto;
+            /* dorong ke bawah */
+        }
+
+        .hubungi .btn {
+
+            display: flex;
+            justify-content: center;
+            /* padding-bottom: 20px; */
+
+        }
+
+        .hubungi {
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background: #ffb733;
+        }
+
+        .share {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .share span {
+            color: #555;
+        }
+
+        .share-btn {
+            text-decoration: none;
+            padding: 5px 8px;
+            /* border-radius: 4px; */
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .share-btn.wa {
+            background: #25D366;
+        }
+
+        .share-btn.fb {
+            background: #1877F2;
+        }
+
+        .share-btn.tw {
+            background: #000;
+        }
+
+        .share-btn:hover {
+            opacity: 0.85;
+        }
+
+        .share-btn.li {
+            background: #0A66C2;
+        }
+
+        .share-btn.tg {
+            background: #229ED9;
+        }
+
+        .share-btn.cp {
+            background: #666;
+        }
+
+        .single__mission {
+            margin-bottom: 30px;
+        }
+
+        .single__mission i {
+            color: #fcc236;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* .single__mission ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        
+
+        .single__mission li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        } */
+
+        .single__mission p {
+            margin-bottom: 14px;
+            /* jarak antar paragraf */
+            line-height: 1.6;
+            /* jarak antar baris */
+        }
+
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="services">
+        <div class="container">
+            <span class="label">Layanan Kami</span>
+            <h2>Semua Legalitas Usaha, Cukup di Izinkan</h2>
+            <p class="desc">
+                Dari SBU hingga ISO, dari pendirian PT sampai laporan pajak. Semua beres tanpa ribet!.
+                Izinkan menyediakan layanan lengkap untuk kebutuhan legalitas usaha.
+            </p>
+            <div class="cards">
+                <div class="card" id="paket-sbu-jasa-konstruksi-1">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Paket SBU Jasa Konstruksi</h3>
+                            <p>
+                                Bikin SBUJK jadi lebih hemat & lengkap bareng Izinkan!
+                            </p>
+                            <ul>
+                                <li>SBU Jasa Konstruksi</li>
+                                <li>SKK Tenaga Ahli</li>
+                                <li>KTA Asosiasi</li>
+                                <li>Sertifikat Standar Terverifikasi</li>
+                            </ul>
+                            <!-- Bagian bawah yang ingin ditonjolkan -->
+                            <p><i class="fa fa-check-square-o"></i> Proses super cepat & mudah</p>
+                            <p><i class="fa fa-check-square-o"></i> Bayar setelah dokumen selesai</p>
+
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="paket-sbu-jasa-konstruksi-2">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Paket SBU Konsultan Konstruksi</h3>
+                            <p>
+                                Semua kualifikasi kecil hingga besar kami bantu urus.
+                            </p>
+                            <ul>
+                                <li>SBU Konsultan</li>
+                                <li>SKK Tenaga Ahli</li>
+                                <li>KTA Asosiasi</li>
+                                <li>Sertifikat Standar</li>
+                            </ul>
+                            <p>Semua kualifikasi: kecil, menengah, hingga besar bisa kami bantu urus.</p>
+                            <p><i class="fa fa-check-square-o"></i> Kamu fokus bangun proyek, biar kami yang urus
+                                legalitasnya!</p>
+                            <p>Konsultasikan kebutuhan SBU kamu sekarang</p>
+
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" id="paket-sbu-jasa-konstruksi-3">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Paket SBU Non Konstruksi</h3>
+                            <p>
+                                Proses cepat, legalitas aman, terpercaya.
+                            </p>
+                            <p>Proses Cepat, Legalitas Aman! Sertifikat Badan Usaha (SBU) untuk konsultan non
+                                konstruksi kini jadi kebutuhan utama agar usahamu bisa dipercaya dan berkompetisi secara
+                                sah.</p>
+
+                            <p>Izinkan hadir sebagai solusi terbaik untuk pengurusan SBU Konsultan Non Konstruksi,
+                                mulai dari konsultasi awal, penyusunan dokumen, hingga penerbitan sertifikat.</p>
+
+                            <p>Konsultasikan sekarang dengan kami
+                            </p>
+
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cards">
+                <div class="card">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Sertifikasi SKK kontruksi</h3>
+                            <p>
+                                Ujian SKK Konstruksi Kini Lebih Mudah Bersama Izinkan!
+                            </p>
+                            <p>Ingin mengikuti ujian Sertifikat Kompetensi Kerja (SKK) Konstruksi tapi masih bingung
+                                mulai dari mana? Tenang! Legalsy siap membantu prosesnya dari awal hingga akhir,
+                                termasuk pemilihan jadwal ujian yang fleksibel sesuai kebutuhanmu.</p>
+                            <p>Jenjang SKK yang tersedia</p>
+                            <ul>
+                                <li>Operator (1, 2, 3)</li>
+                                <li>Teknisi/Analis (4, 5, 6)</li>
+                                <li>Ahli (7, 8, 9)</li>
+                            </ul>
+                            <p>Hubungi kami sekarang dan dapatkan bantuan langsung dari tim konsultan kami.</p>
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" id="paket-sbu-jasa-konstruksi">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Pendirian Badan Usaha CV dan PT</h3>
+                            <p>
+                                Bersama Legalsy, kamu gak cuma dapat legalitas resmi tapi juga PROMO MENARIK
+                            </p>
+                            <p>Pendirian untuk seluruh wilayah Indonesia!</p>
+                            <p style="margin-bottom: 0px;">Kamu akan dapat:</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Akta Pendirian</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>SK Kemenkumham</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>NPWP Badan</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>SKT</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>NIB</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Sertifikat Standar</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Email Bisnis</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Logo Perusahaan</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Kop Surat Resmi</p>
+                            <p>Gak perlu ribet, semua urusannya tinggal serahin ke Legalsy!</p>
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="sertifikat.png" alt="">
+                    <div class="card-body">
+                        <div class="single__mission">
+                            <div class="share">
+                                <span>Bagikan:</span>
+                                <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                            </div>
+                            <h3>Paket Pendirian PT</h3>
+                            <p>
+                                Pendirian PT Perorangan hanya 950rb?
+                            </p>
+                            <p>Bisa Banget di Legalsy! Kabar baik buat kamu yang ingin memulai bisnis. Sekarang bikin PT
+                                Perorangan hanya Rp950.000!</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Proses cepat</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Syarat mudah (cukup 1
+                                pengurus)</p>
+                            <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Legalitas lengkap</p>
+
+                            <p>
+                                Dokumen yang akan kamu dapatkan:
+                            </p>
+                            <ul>
+                                <li>Pernyataan Pendirian</li>
+                                <li>SK Pendirian</li>
+                                <li>NPWP PT</li>
+                                <li>NIB</li>
+                                <li>Sertifikat Standar</li>
+                            </ul>
+
+                            <p>Saatnya wujudkan impian punya usaha sendiri! Konsultasi gratis hari ini.</p>
+                        </div>
+                        <div class="hubungi">
+                            <a href="#" class="btn">Hubungi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+<script>
+    document.querySelectorAll('.share-btn').forEach(btn => {
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            const card = this.closest('.card');
+            const title = card.querySelector('h3').innerText;
+            const desc = card.querySelector('p').innerText;
+
+            const cardUrl = window.location.origin +
+                window.location.pathname +
+                '#' + card.id;
+
+            const text = `${title} - ${desc}`;
+            let shareUrl = '';
+
+            switch (this.dataset.platform) {
+                case 'whatsapp':
+                    shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + cardUrl)}`;
+                    break;
+
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(cardUrl)}`;
+                    break;
+
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(cardUrl)}`;
+                    break;
+
+                case 'linkedin':
+                    shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(cardUrl)}`;
+                    break;
+
+                case 'telegram':
+                    shareUrl = `https://t.me/share/url?url=${encodeURIComponent(cardUrl)}&text=${encodeURIComponent(text)}`;
+                    break;
+
+                case 'copy':
+                    navigator.clipboard.writeText(cardUrl);
+                    alert('Link card berhasil disalin!');
+                    return;
+            }
+
+            window.open(shareUrl, '_blank');
+        });
+    });
+</script>
+
+
+
+
+
+
+
+</html>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/bukamas.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
@@ -131,6 +131,306 @@
             color: #fcc236;
             margin-right: 10px;
             font-size: 26px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f6f8;
+        }
+
+
+        .services {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .label {
+            color: orange;
+            font-size: 14px;
+        }
+
+        h2 {
+            font-size: 36px;
+            margin: 10px 0;
+        }
+
+        .desc {
+            max-width: 750px;
+            margin: auto;
+            color: #555;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            /* border-radius: 12px; */
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: 0.3s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        /* .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        } */
+
+        .card img {
+            width: 100%;
+            /* height: 220px; */
+            /* tinggi fix */
+            /* object-fit: contain; */
+            /* tidak terpotong */
+            display: block;
+        }
+
+        /* Gambar di atas & tengah */
+        .card>img {
+            display: block;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            padding-top: 3%;
+            padding-left: 3%;
+            padding-right: 3%;
+            box-sizing: border-box;
+        }
+
+        .card-body {
+            padding: 25px;
+            text-align: left;
+
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card-body h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card-body p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .card-body ul {
+            margin: 10px 0 20px;
+            padding-left: 18px;
+            color: #444;
+        }
+
+        /* Menghilangkan titik list bawaan */
+        /* .card-body ul {
+            list-style: none;
+            padding-left: 0;
+        } */
+
+        .card-body li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        /* Mengatur warna dan jarak ikon */
+        /* .card-body li i {
+            color: orange;
+            margin-right: 10px;
+        } */
+
+        /* Penyesuaian agar teks tidak berantakan jika panjang */
+        /* .card-body li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        } */
+
+        .btn {
+            /* display: inline-block; */
+            display: block;
+            background: orange;
+            color: black;
+            padding: 12px 20px;
+            /* border-radius: 6px; */
+            text-decoration: none;
+            font-weight: bold;
+
+            width: 100%;
+            /* tombol selebar card */
+            margin-top: auto;
+            /* dorong ke bawah */
+        }
+
+        .hubungi .btn {
+
+            display: flex;
+            justify-content: center;
+            /* padding-bottom: 20px; */
+
+        }
+
+        .hubungi {
+            margin-top: auto;
+        }
+
+        .btn:hover {
+            background: #ffb733;
+        }
+
+        .share {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+            font-size: 13px;
+        }
+
+        .share span {
+            color: #555;
+        }
+
+        .share-btn {
+            text-decoration: none;
+            padding: 5px 8px;
+            /* border-radius: 4px; */
+            font-size: 12px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .share-btn.wa {
+            background: #25D366;
+        }
+
+        .share-btn.fb {
+            background: #1877F2;
+        }
+
+        .share-btn.tw {
+            background: #000;
+        }
+
+        .share-btn:hover {
+            opacity: 0.85;
+        }
+
+        .share-btn.li {
+            background: #0A66C2;
+        }
+
+        .share-btn.tg {
+            background: #229ED9;
+        }
+
+        .share-btn.cp {
+            background: #666;
+        }
+
+        .single__mission {
+            margin-bottom: 30px;
+        }
+
+        .single__mission i {
+            color: #fcc236;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        /* .single__mission ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        
+
+        .single__mission li {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 8px;
+            align-items: flex-start;
+        } */
+
+        .single__mission p {
+            margin-bottom: 14px;
+            /* jarak antar paragraf */
+            line-height: 1.6;
+            /* jarak antar baris */
+        }
+
+        .card-image {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* MOBILE RESPONSIVE CARD */
+        @media (max-width: 768px) {
+
+            .cards {
+                flex-direction: column;
+                gap: 0;
+                /* hilangkan gap */
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+
+            .card {
+                width: 100%;
+                /* full width */
+                margin: 10px 0;
+                /* jarak atas-bawah saja */
+            }
+
+        }
+
+        @media (max-width: 768px) {
+            .cards.col-xs-12 {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
         }
     </style>
 
@@ -563,13 +863,13 @@
                 <div class="row">
                     <div class="service__section__wrap clearfix">
                         <!-- Start Single Service -->
-                        <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
+                        <!-- <div class="col-md-5 col-lg-4 col-sm-12 col-xs-12">
                             <div class="service__thumb">
                                 <img src="images/about/pelayanan-kami.jpg" alt="about image">
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Service -->
-                        <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12 h1__service pt--40 pb--30">
+                        <!-- <div class="col-md-7 col-lg-8 col-sm-12 col-xs-12 h1__service pt--40 pb--30">
                             <div class="row">
                                 <div class="col-xs-12">
                                     <div class="section__title text-left">
@@ -581,9 +881,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <!-- Start Single Service -->
-                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                            <div class="row"> -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
@@ -599,10 +899,10 @@
                                             <h2><a href="single-service.html">PENGURUSAN SKK</a></h2>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Single Service -->
-                                <!-- Start Single Service -->
-                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                                </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
@@ -618,10 +918,10 @@
                                             <h2><a href="single-service.html">PENGURUSAN SBU</a></h2>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Single Service -->
-                                <!-- Start Single Service -->
-                                <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
+                                </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12">
                                     <div class="service">
                                         <div class="service__thumb">
                                             <a href="single-service.html">
@@ -637,14 +937,471 @@
                                             <h2><a href="single-service.html">PENGURUSAN SKTTK & SBUJPTL</a></h2>
                                         </div>
                                     </div>
-                                </div>
-                                <!-- End Single Service -->
-                            </div>
-                        </div>
+                                </div> -->
+                        <!-- End Single Service -->
+                        <!-- </div>
+                        </div> -->
+
+
+
+
+
+
+
+
                     </div>
                 </div>
             </div>
         </section>
+
+
+        <section class="htc__service__area service__page bg__gray ptb--100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="section__title text-center">
+                            <h2 class="title__line text--theme"><span class="text--theme">LAYANAN </span>KAMI</h2>
+                            <p>Solusi terpercaya untuk pengurusan sertifikasi, standardisasi, dan legalitas usaha Anda
+                                guna mendukung kepatuhan regulasi serta meningkatkan daya saing perusahaan di pasar
+                                nasional maupun internasional.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12"> -->
+                    <div class="service__section__wrap clearfix">
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/1.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">SKK (Sertifikat Kompetensi Kerja)</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12">
+                            <div class="card" id="paket-sbu-jasa-konstruksi-1">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Paket SBU Jasa Konstruksi</h3>
+                                        <p>
+                                            Bikin SBUJK jadi lebih hemat & lengkap bareng Izinkan!
+                                        </p>
+                                        <ul>
+                                            <li>SBU Jasa Konstruksi</li>
+                                            <li>SKK Tenaga Ahli</li>
+                                            <li>KTA Asosiasi</li>
+                                            <li>Sertifikat Standar Terverifikasi</li>
+                                        </ul>
+                                        <!-- Bagian bawah yang ingin ditonjolkan -->
+                                        <p><i class="fa fa-check-square-o"></i> Proses super cepat & mudah</p>
+                                        <p><i class="fa fa-check-square-o"></i> Bayar setelah dokumen selesai</p>
+
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="paket-sbu-jasa-konstruksi-2">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Paket SBU Konsultan Konstruksi</h3>
+                                        <p>
+                                            Semua kualifikasi kecil hingga besar kami bantu urus.
+                                        </p>
+                                        <ul>
+                                            <li>SBU Konsultan</li>
+                                            <li>SKK Tenaga Ahli</li>
+                                            <li>KTA Asosiasi</li>
+                                            <li>Sertifikat Standar</li>
+                                        </ul>
+                                        <p>Semua kualifikasi: kecil, menengah, hingga besar bisa kami bantu urus.
+                                        </p>
+                                        <p><i class="fa fa-check-square-o"></i> Kamu fokus bangun proyek, biar kami
+                                            yang
+                                            urus
+                                            legalitasnya!</p>
+                                        <p>Konsultasikan kebutuhan SBU kamu sekarang</p>
+
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card" id="paket-sbu-jasa-konstruksi-3">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Paket SBU Non Konstruksi</h3>
+                                        <p>
+                                            Proses cepat, legalitas aman, terpercaya.
+                                        </p>
+                                        <p>Proses Cepat, Legalitas Aman! Sertifikat Badan Usaha (SBU) untuk
+                                            konsultan
+                                            non
+                                            konstruksi kini jadi kebutuhan utama agar usahamu bisa dipercaya dan
+                                            berkompetisi secara
+                                            sah.</p>
+
+                                        <p>Izinkan hadir sebagai solusi terbaik untuk pengurusan SBU Konsultan Non
+                                            Konstruksi,
+                                            mulai dari konsultasi awal, penyusunan dokumen, hingga penerbitan
+                                            sertifikat.</p>
+
+                                        <p>Konsultasikan sekarang dengan kami
+                                        </p>
+
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Sertifikasi SKK kontruksi</h3>
+                                        <p>
+                                            Ujian SKK Konstruksi Kini Lebih Mudah Bersama Izinkan!
+                                        </p>
+                                        <p>Ingin mengikuti ujian Sertifikat Kompetensi Kerja (SKK) Konstruksi tapi
+                                            masih
+                                            bingung
+                                            mulai dari mana? Tenang! Legalsy siap membantu prosesnya dari awal
+                                            hingga
+                                            akhir,
+                                            termasuk pemilihan jadwal ujian yang fleksibel sesuai kebutuhanmu.</p>
+                                        <p>Jenjang SKK yang tersedia</p>
+                                        <ul>
+                                            <li>Operator (1, 2, 3)</li>
+                                            <li>Teknisi/Analis (4, 5, 6)</li>
+                                            <li>Ahli (7, 8, 9)</li>
+                                        </ul>
+                                        <p>Hubungi kami sekarang dan dapatkan bantuan langsung dari tim konsultan
+                                            kami.
+                                        </p>
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card" id="paket-sbu-jasa-konstruksi">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Pendirian Badan Usaha CV dan PT</h3>
+                                        <p>
+                                            Bersama Legalsy, kamu gak cuma dapat legalitas resmi tapi juga PROMO
+                                            MENARIK
+                                        </p>
+                                        <p>Pendirian untuk seluruh wilayah Indonesia!</p>
+                                        <p style="margin-bottom: 0px;">Kamu akan dapat:</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Akta
+                                            Pendirian</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>SK
+                                            Kemenkumham</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>NPWP
+                                            Badan
+                                        </p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>SKT</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>NIB</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Sertifikat
+                                            Standar</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Email
+                                            Bisnis
+                                        </p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Logo
+                                            Perusahaan</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Kop Surat
+                                            Resmi</p>
+                                        <p>Gak perlu ribet, semua urusannya tinggal serahin ke Legalsy!</p>
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/service/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="share">
+                                            <span>Bagikan:</span>
+                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
+                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
+                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
+                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
+                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
+                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        </div>
+                                        <h3>Paket Pendirian PT</h3>
+                                        <p>
+                                            Pendirian PT Perorangan hanya 950rb?
+                                        </p>
+                                        <p>Bisa Banget di Legalsy! Kabar baik buat kamu yang ingin memulai bisnis.
+                                            Sekarang bikin PT
+                                            Perorangan hanya Rp950.000!</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Proses
+                                            cepat
+                                        </p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Syarat
+                                            mudah
+                                            (cukup 1
+                                            pengurus)</p>
+                                        <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Legalitas
+                                            lengkap</p>
+
+                                        <p>
+                                            Dokumen yang akan kamu dapatkan:
+                                        </p>
+                                        <ul>
+                                            <li>Pernyataan Pendirian</li>
+                                            <li>SK Pendirian</li>
+                                            <li>NPWP PT</li>
+                                            <li>NIB</li>
+                                            <li>Sertifikat Standar</li>
+                                        </ul>
+
+                                        <p>Saatnya wujudkan impian punya usaha sendiri! Konsultasi gratis hari ini.
+                                        </p>
+                                    </div>
+                                    <div class="hubungi">
+                                        <a href="#" class="btn">Hubungi Sekarang</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/2.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">SBUJK (Sertifikat Badan Usaha Jasa Konstruksi)</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/3.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">ISO (Internasional Standar Organisasi)</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/4.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">Akuntan Publik / Laporan Audit Keuangan (AKP)</a>
+                                    </h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/5.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">SMK3 Perusahaan</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 col-sm-4 col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/6.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">Ahli K3 Umum</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/7.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">SBU KELISTRIKAN</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+                        <!-- Start Single Service -->
+                        <!-- <div class="col-md-3 col-lg-3 hidden-sm col-xs-12">
+                            <div class="service foo">
+                                <div class="service__thumb">
+                                    <a href="single-service.html">
+                                        <img src="images/service/8.jpg" alt="service images">
+                                    </a>
+                                    <div class="service__hover">
+                                        <div class="service__action">
+                                            <a href="single-service.html">SELENGKAPNYA</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="service__details">
+                                    <h2><a href="single-service.html">SERKOM KELISTRIKAN</a></h2>
+                                </div>
+                            </div>
+                        </div> -->
+                        <!-- End Single Service -->
+
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- End Service Area -->
 
         <!-- Start Latest Project Area -->
         <section class="htc__latest__project__area ptb--150 bg__white text__pos">
@@ -965,7 +1722,7 @@
                 </div>
             </div>
             <div class="text__shape">
-                <h2>TEAM</h2>
+                <h2>TIM</h2>
             </div>
         </section>
         <!-- End Team Area -->
@@ -1159,7 +1916,7 @@
                                     <h2><a href="blog-details.html">Mengapa Jasa Perizinan Usaha Bidang Kesehatan Sangat
                                             Dibutuhkan?</a></h2>
                                     <div class="blog__btn">
-                                        <a href="blog-details.html">SELENGKAPNYA<i
+                                        <a href="artikel.html">SELENGKAPNYA<i
                                                 class="zmdi zmdi-long-arrow-right"></i></a>
                                     </div>
                                 </div>
@@ -1194,8 +1951,8 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="newsletter__wrap">
-                            <h2 class="title__line">SUBSCRIBE <span class="text--theme">NEWSLETTER</span></h2>
-                            <h4>Dapatkan update terbaru seputar sertifikasi dan legalitas perusahaan.</h4>
+                            <h2 class="title__line">UPDATE <span class="text--theme">LEGALITAS</span></h2>
+                            <h4>Dapatkan info terbaru seputar regulasi dan sertifikasi langsung di email Anda.</h4>
                             <div class="newsletter__form">
                                 <div class="input__box">
                                     <div id="mc_embed_signup">
@@ -1213,7 +1970,7 @@
                                                         tabindex="-1" value="">
                                                 </div>
                                                 <div class="clearfix subscribe__btn"><input type="submit"
-                                                        value="SUBSCRIBE NOW" name="subscribe"
+                                                        value="DAFTAR SEKARANG" name="subscribe"
                                                         id="mc-embedded-subscribe" class="bst__btn btn--white__color">
 
                                                 </div>
