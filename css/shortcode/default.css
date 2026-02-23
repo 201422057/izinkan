@@ -428,7 +428,7 @@ body {
 [data--black__overlay]:before {
     position: absolute;
     content: '';
-    background: #000;
+    /* background: #000; */
     width: 100%;
     height: 100%;
     top: 0;
