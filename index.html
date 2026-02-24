@@ -449,6 +449,46 @@
                 font-size: 13px;
             }
         }
+
+        .slider-grid {
+            position: absolute;
+            inset: 0;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .slider-grid span {
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transform: scale(0.5);
+            animation: gridIn 0.6s forwards;
+        }
+
+        @keyframes gridIn {
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* .owl-item.active .slide {
+    animation: zoomFade 1.2s ease forwards;
+}
+
+@keyframes zoomFade {
+    from {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+} */
     </style>
 
 
@@ -557,9 +597,14 @@
                 <div class="slide slider__fixed--height slide__align--center"
                     style="background: rgba(0, 0, 0, 0) url(images/slider/bg/1.jpg) no-repeat scroll 0 0 / cover;"
                     data--black__overlay="6">
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
+
+                                <div class="slider-grid"></div>
+
+                                
                                 <!-- <div class="slider__inner">
                                     <h4>IZINKAN</h4>
                                     <h1>Urus Sertifikasi Bisnis Jadi Lebih Mudah & Aman Bersama</h1>
@@ -574,9 +619,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="htc__slider__fornt__img">
+                    <!-- <div class="htc__slider__fornt__img">
                         <img src="images/slider/fornt-img/1.png" alt="slider images">
-                    </div>
+                    </div> -->
                 </div>
                 <!-- End Single Slide -->
 
@@ -584,10 +629,12 @@
                 <div class="slide slider__fixed--height slide__align--center"
                     style="background: rgba(0, 0, 0, 0) url(images/slider/bg/2.jpg) no-repeat scroll 0 0 / cover;"
                     data--black__overlay="6">
+                    
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12 col-lg-12">
                                 <div class="slider__inner">
+                                    <div class="slider-grid"></div>
                                     <!-- <h4>MITRA LEGALITAS TERPERCAYA</h4>
                                     <h1>KAMI MEMBANGUN KEPERCAYAAN BISNIS ANDA</h1>
                                     <p>
@@ -601,9 +648,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="htc__slider__fornt__img">
+                    <!-- <div class="htc__slider__fornt__img">
                         <img src="images/slider/fornt-img/1.png" alt="slider images">
-                    </div>
+                    </div> -->
                 </div>
                 <!-- End Single Slide -->
             </div>
@@ -1161,7 +1208,7 @@
                                         <p>Ingin mengikuti ujian Sertifikat Kompetensi Kerja (SKK) Konstruksi tapi
                                             masih
                                             bingung
-                                            mulai dari mana? Tenang! Legalsy siap membantu prosesnya dari awal
+                                            mulai dari mana? Tenang! Izinkan siap membantu prosesnya dari awal
                                             hingga
                                             akhir,
                                             termasuk pemilihan jadwal ujian yang fleksibel sesuai kebutuhanmu.</p>
@@ -1201,7 +1248,7 @@
                                         </div>
                                         <h3>Pendirian Badan Usaha CV dan PT</h3>
                                         <p>
-                                            Bersama Legalsy, kamu gak cuma dapat legalitas resmi tapi juga PROMO
+                                            Bersama Izinkan, kamu gak cuma dapat legalitas resmi tapi juga PROMO
                                             MENARIK
                                         </p>
                                         <p>Pendirian untuk seluruh wilayah Indonesia!</p>
@@ -1224,7 +1271,7 @@
                                             Perusahaan</p>
                                         <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Kop Surat
                                             Resmi</p>
-                                        <p>Gak perlu ribet, semua urusannya tinggal serahin ke Legalsy!</p>
+                                        <p>Gak perlu ribet, semua urusannya tinggal serahin ke Izinkan!</p>
                                     </div>
                                     <div class="hubungi">
                                         <a class="htc__btn"
@@ -1250,13 +1297,11 @@
                                             <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
                                             <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
                                         </div>
-                                        <h3>Paket Pendirian PT</h3>
-                                        <p>
-                                            Pendirian PT Perorangan hanya 950rb?
-                                        </p>
-                                        <p>Bisa Banget di Legalsy! Kabar baik buat kamu yang ingin memulai bisnis.
-                                            Sekarang bikin PT
-                                            Perorangan hanya Rp950.000!</p>
+                                        <h3>Paket Pendirian PT Perorangan</h3>
+                                        <p>Ingin legalitas resmi dengan investasi yang sangat terjangkau?</p>
+                                        <p>Bisa Banget di Izinkan! Kabar baik buat kamu yang ingin memulai bisnis dengan
+                                            langkah profesional. Sekarang, memiliki PT Perorangan bisa terwujud dengan
+                                            nilai investasi yang sangat ekonomis!</p>
                                         <p style="margin-bottom: 0px;"><i class="fa fa-check-square-o"></i>Proses
                                             cepat
                                         </p>
@@ -1445,7 +1490,7 @@
         <!-- End Service Area -->
 
         <!-- Start Latest Project Area -->
-        <section class="htc__latest__project__area ptb--150 bg__white text__pos">
+        <!-- <section class="htc__latest__project__area ptb--150 bg__white text__pos">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
@@ -1459,9 +1504,9 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="htc__latest__project__wrap h1__project clearfix mt--30">
+                    <div class="htc__latest__project__wrap h1__project clearfix mt--30"> -->
                         <!-- Start Single Project -->
-                        <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
+                        <!-- <div class="col-md-5 col-lg-5 hidden-sm col-xs-12">
                             <div class="project__itm foo">
                                 <div class="project__thumb">
                                     <a href="single-project.html">
@@ -1475,9 +1520,9 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <!-- End Single Project -->
-                        <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
+                        <!-- <div class="col-md-7 col-lg-7 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <div class="project__itm foo">
@@ -1547,7 +1592,7 @@
             <div class="text__shape">
                 <h2>LEGALITAS</h2>
             </div>
-        </section>
+        </section> -->
         <!-- End Latest Project Area -->
         <!-- Start Counter Up Area -->
         <section class="htc__counterup__area count--2 h1__countdown bg__gray">
@@ -1569,10 +1614,10 @@
                             <div class="htc__call__btn">
                                 <!-- <a class="htc__btn" href="#">KONSULTASI GRATIS</a> -->
                                 <a class="htc__btn"
-                                            href="https://wa.me/6282298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20Paket%20Layanan%20Jasa%20Terbaik."
-                                            target="_blank">
-                                            Konsultasi Gratis
-                                        </a>
+                                    href="https://wa.me/6282298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20Paket%20Layanan%20Jasa%20Terbaik."
+                                    target="_blank">
+                                    Konsultasi Gratis
+                                </a>
                             </div>
                         </div>
                         <div class="htc__counterup__wrap"
@@ -1767,9 +1812,9 @@
                     </div>
                 </div>
             </div>
-            <div class="text__shape">
+            <!-- <div class="text__shape">
                 <h2>TIM</h2>
-            </div>
+            </div> -->
         </section>
         <!-- End Team Area -->
         <!-- Start Testimonial Area -->
@@ -1837,7 +1882,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+                    <!-- <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
                         <div class="reguest__quote">
                             <div class="section__title text-left">
                                 <h2 class="title__line">PERMINTAAN <span class="text--theme">PENAWARAN</span></h2>
@@ -1870,7 +1915,7 @@
                             </form>
                             <p class="form-messege"></p>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -2290,6 +2335,43 @@
             });
         });
     </script>
+
+    <!-- <script>
+        function buildGrid(slide) {
+            const grid = slide.querySelector('.slider-grid');
+            if (!grid) return;
+
+            grid.innerHTML = '';
+            const bg = slide.style.backgroundImage;
+
+            for (let i = 0; i < 40; i++) {
+                const span = document.createElement('span');
+                span.style.backgroundImage = bg;
+                span.style.animationDelay = (Math.random() * 0.5) + 's';
+                grid.appendChild(span);
+            }
+        }
+
+        $('.slider__activation__wrap').on('changed.owl.carousel', function (e) {
+            const slide = $(e.target).find('.owl-item.active .slide')[0];
+            buildGrid(slide);
+        });
+    </script> -->
+
+    <script>
+$(document).ready(function(){
+    $('.slider__activation__wrap').owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        autoplayHoverPause: false,
+        nav: false,
+        dots: true,
+        smartSpeed: 1200
+    });
+});
+</script>
 
     <!-- ============================= -->
     <!-- FLOATING WHATSAPP BUTTON -->

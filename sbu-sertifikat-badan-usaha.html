@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- All css files are included here. -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <!-- Bootstrap fremwork main css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Owl Carousel  main css -->
@@ -244,6 +245,152 @@
         .footer__link .ft__menu li a {
             white-space: nowrap;
         }
+
+
+
+
+
+        .htc__mission__area {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .htc__offer__thumb {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+        }
+
+        .htc__offer__thumb__inner,
+        .missionSwiper,
+        .missionSwiper .swiper-wrapper,
+        .missionSwiper .swiper-slide {
+            height: 100%;
+        }
+
+        .missionSwiper .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Responsive */
+        @media (max-width: 991px) {
+            .htc__offer__thumb {
+                position: relative;
+                width: 100%;
+                height: 400px;
+                margin-top: 40px;
+            }
+        }
+
+
+
+
+
+        /* ===== Portrait Slider Section ===== */
+        .portrait-slider-section {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .portraitSwiper {
+            width: 100%;
+        }
+
+        .portraitSwiper .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Gambar Portrait */
+        /* .portraitSwiper .swiper-slide img {
+            width: auto;
+            max-width: 100%;
+            height: 400px;
+            max-height: 80vh; */
+        /* supaya tidak terlalu panjang */
+        /* object-fit: contain; */
+        /* PENTING: agar tidak terpotong */
+        /* border-radius: 12px; */
+        /* } */
+
+        .portraitSwiper .swiper-slide img {
+            width: 100%;
+            height: auto;
+            max-height: 75vh;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* Mobile Optimization */
+        @media (max-width: 768px) {
+
+            .portrait-slider-section {
+                padding: 40px 0;
+            }
+
+            .portrait-slider-section .container {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            .portraitSwiper .swiper-slide img {
+                width: 100%;
+                height: auto;
+                max-height: 75vh;
+            }
+
+            .portraitSwiper .swiper-button-prev {
+                left: 8px;
+            }
+
+            .portraitSwiper .swiper-button-next {
+                right: 8px;
+            }
+        }
+
+        /* Pastikan swiper relative */
+        .portraitSwiper {
+            position: relative;
+        }
+
+        /* Atur posisi tombol agar di dalam gambar */
+        .portraitSwiper .swiper-button-next,
+        .portraitSwiper .swiper-button-prev {
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        /* Geser agar lebih masuk ke dalam gambar */
+        .portraitSwiper .swiper-button-prev {
+            left: 450px;
+        }
+
+        .portraitSwiper .swiper-button-next {
+            right: 450px;
+        }
+
+        /* Hover effect */
+        .portraitSwiper .swiper-button-next:hover,
+        .portraitSwiper .swiper-button-prev:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Perkecil icon panah */
+        .portraitSwiper .swiper-button-next::after,
+        .portraitSwiper .swiper-button-prev::after {
+            font-size: 16px;
+            font-weight: bold;
+        }
     </style>
 
 
@@ -349,7 +496,7 @@
         <!-- End Header Style -->
         <!-- Start Bradcaump area -->
         <div class="ht__bradcaump__area" data--black__overlay="6"
-            style="background: rgba(0, 0, 0, 0) url(images/bg/izinkan-bg.jpg) no-repeat scroll center center / cover ;">
+            style="background: rgba(0, 0, 0, 0) url(images/bg/5.jpg) no-repeat scroll center center / cover ;">
             <div class="ht__bradcaump__wrap">
                 <div class="container">
                     <div class="row">
@@ -371,12 +518,42 @@
         </div>
         <!-- End Bradcaump area -->
 
+        <!-- Portrait Slider Section -->
+        <section class="portrait-slider-section">
+            <div class="container-fluid p-0">
+                <div class="swiper portraitSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <img src="images/service/1-sbu.jpg" alt="Slide 1">
+                        </div>
+
+                        <div class="swiper-slide">
+                            <img src="images/service/2-sbu.jpg" alt="Slide 2">
+                        </div>
+
+                        <!-- <div class="swiper-slide">
+                            <img src="images/service/3-sbu.jpg" alt="Slide 3">
+                        </div> -->
+
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Navigation -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
 
 
         <!-- ============================= -->
         <!-- 1. APA ITU SBU -->
         <!-- ============================= -->
-        <section class="sbu-section ptb--150">
+        <section class="sbu-section pb--150">
             <div class="container">
                 <div class="section__title text-center">
                     <h2 class="title__line">Apa Itu <span class="text--theme">SBU?</span></h2>
@@ -546,11 +723,40 @@
                     </div>
                 </div>
             </div>
-            <div class="htc__offer__thumb">
+            <!-- <div class="htc__offer__thumb">
                 <div class="htc__offer__thumb__inner">
                     <img src="images/about/1.jpg" alt="offer img">
                 </div>
+            </div> -->
+
+            <div class="htc__offer__thumb">
+                <div class="htc__offer__thumb__inner">
+
+                    <div class="swiper missionSwiper">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <img src="images/about/1.jpg" alt="slide 1">
+                            </div>
+
+                            <div class="swiper-slide">
+                                <img src="images/about/2.jpg" alt="slide 2">
+                            </div>
+
+                            <!-- <div class="swiper-slide">
+                                <img src="images/about/3.jpg" alt="slide 3">
+                            </div> -->
+
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+
+                    </div>
+
+                </div>
             </div>
+
         </section>
         <!-- End Offer Area -->
 
@@ -623,7 +829,7 @@
                     <div class="offer">
                         <div class="offer__details">
                             <h2>
-                                Masih Bingung Soal <span class="text--theme">SBU</span>?
+                                Masih Bingung Soal <span class="text--theme">SBU </span>?
                             </h2>
                             <h2>Ini Jawabannya</h2>
                         </div>
@@ -1027,6 +1233,9 @@
 
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Bootstrap framework js -->
     <script src="js/bootstrap.min.js"></script>
     <!-- All js plugins included in this file. -->
@@ -1059,6 +1268,41 @@
                     parent.find('.accordion-content').slideUp(args);
                 }
             });
+        });
+    </script>
+
+    <script>
+        var missionSwiper = new Swiper(".missionSwiper", {
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".mission-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+
+    <script>
+        var portraitSwiper = new Swiper(".portraitSwiper", {
+            loop: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".portrait-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".portrait-next",
+                prevEl: ".portrait-prev",
+            },
         });
     </script>
 
