@@ -699,6 +699,15 @@ About 2
       font-style: italic;
       padding-right: 19px;
 }
+
+.detailslide__activation--2 .testimonial__thumb {
+      margin-right: 25px;
+      min-width: 37%;
+}
+.detailslide__activation--2 .testimonial__details p {
+      font-style: italic;
+      padding-right: 19px;
+}
 .testimonial__details h2 {
     color: #303030;
     font-family: Open Sans;

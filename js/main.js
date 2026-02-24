@@ -133,6 +133,31 @@ $('.project__menu button').on('click', function(event) {
     dots: true,
   });
 
+  /*---------------------------------------------
+  06. Testimonial Slick Carousel
+------------------------------------------------*/
+  $('.detailslide__activation').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    draggable: true,
+    // fade: true,
+    dots: true,
+  });
+
+
+/*------------------------------------------
+  07. Testimonial Slick Carousel
+-------------------------------------------*/
+  $('.detailslide__activation--2').slick({
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    arrows: false,
+    draggable: true,
+    // fade: true,
+    dots: true,
+  });
+
 
 
 /*-----------------------------

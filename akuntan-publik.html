@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/bukamas.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- All css files are included here. -->
@@ -32,6 +32,74 @@
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/acrodion.css">
     <style>
+        .testimonial--center {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial--center .testimonial__thumb {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonial--center .testimonial__thumb img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .testimonial--center .testimonial__thumb img {
+            max-width: 500px;
+            /* bisa 400px atau 600px sesuai selera */
+            width: 100%;
+        }
+
+
+        /* ============================= */
+        /* SLICK DOTS DI DALAM GAMBAR */
+        /* ============================= */
+
+        .testimonial--overlay {
+            position: relative;
+        }
+
+        .testimonial--overlay .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            /* jarak dari bawah gambar */
+            left: 95%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .testimonial--overlay .slick-dots li {
+            float: none;
+            list-style: none;
+        }
+
+        .testimonial--overlay .slick-dots li button:before {
+            font-size: 12px;
+            color: #fff;
+            /* agar terlihat di atas gambar */
+            opacity: 0.7;
+        }
+
+        .testimonial--overlay .slick-dots li.slick-active button:before {
+            opacity: 1;
+        }
+
+
+
+
+
         .single__mission ul {
             list-style: none;
             padding: 0;
@@ -485,6 +553,36 @@
             </div>
         </div>
         <!-- End Bradcaump area -->
+
+        <section class="htc__testimonial__area pt--130 pb--100 bg__gray">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                        <div class="htc__testimonial__wrap ">
+                            <div class="testimonial__activation testimonial--overlay clearfix"
+                                style="display: flex; align-items: center;">
+                                <div class="testimonial testimonial--center">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/service/1-akp.jpg" alt="clint image">
+                                    </div>
+                                </div>
+                                <div class="testimonial testimonial--center">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/service/2-akp.jpg" alt="clint image">
+                                    </div>
+                                </div>
+                                <div class="testimonial testimonial--center">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/service/3-akp.jpg" alt="clint image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
 
 
 
@@ -1202,11 +1300,11 @@
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- All js plugins included in this file. -->
     <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
     <!-- Waypoints.min.js. -->
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
@@ -1233,6 +1331,44 @@
                     parent.find('.accordion-content').slideUp(args);
                 }
             });
+        });
+    </script>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Owl (untuk slider utama) -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Slick (untuk testimonial) -->
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // ====== Owl untuk slider utama ======
+            $('.slider__activation__wrap').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                nav: true,
+                dots: true
+            });
+
+            // ====== Slick untuk testimonial ======
+            $('.testimonial__activation').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: false,
+                dots: true,
+                adaptiveHeight: true
+            });
+
+
+
         });
     </script>
 

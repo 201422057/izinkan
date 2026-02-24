@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/bukamas.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- All css files are included here. -->
@@ -1286,19 +1286,44 @@
         });
     </script>
 
-    <script>
+    <!-- <script>
         var portraitSwiper = new Swiper(".portraitSwiper", {
             loop: true,
             spaceBetween: 0,
             centeredSlides: true,
             autoplay: {
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
             pagination: {
                 el: ".portrait-pagination",
                 clickable: true,
             },
+            navigation: {
+                nextEl: ".portrait-next",
+                prevEl: ".portrait-prev",
+            },
+        });
+    </script> -->
+
+    <script>
+        var portraitSwiper = new Swiper(".portraitSwiper", {
+            loop: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+
+            speed: 900, // 👉 makin besar makin smooth (700–1200 ideal)
+
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: ".portrait-pagination",
+                clickable: true,
+            },
+
             navigation: {
                 nextEl: ".portrait-next",
                 prevEl: ".portrait-prev",

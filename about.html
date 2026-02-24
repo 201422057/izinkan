@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/ico.png">
+    <link rel="shortcut icon" type="image/x-icon" href="images/bukamas.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
@@ -31,6 +31,75 @@
     <!-- User style -->
     <link rel="stylesheet" href="css/custom.css">
     <style>
+
+        .testimonial--center {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .testimonial--center .testimonial__thumb {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .testimonial--center .testimonial__thumb img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .testimonial--center .testimonial__thumb img {
+            max-width: 500px;
+            /* bisa 400px atau 600px sesuai selera */
+            width: 100%;
+        }
+
+
+        /* ============================= */
+        /* SLICK DOTS DI DALAM GAMBAR */
+        /* ============================= */
+
+        .testimonial--overlay {
+            position: relative;
+        }
+
+        .testimonial--overlay .slick-dots {
+            position: absolute;
+            bottom: 20px;
+            /* jarak dari bawah gambar */
+            left: 95%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            padding: 0;
+            margin: 0;
+            z-index: 10;
+        }
+
+        .testimonial--overlay .slick-dots li {
+            float: none;
+            list-style: none;
+        }
+
+        .testimonial--overlay .slick-dots li button:before {
+            font-size: 12px;
+            color: #fff;
+            /* agar terlihat di atas gambar */
+            opacity: 0.7;
+        }
+
+        .testimonial--overlay .slick-dots li.slick-active button:before {
+            opacity: 1;
+        }
+
+
+
+
+
         .single__mission ul {
             list-style: none;
             padding: 0;
