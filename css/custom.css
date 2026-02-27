@@ -818,3 +818,133 @@ body {
 .news__input input:focus::placeholder {
   opacity: 0.6;
 }
+
+
+
+
+/* Brand Slider */
+.htc__brand__area {
+  padding: 40px 0;
+}
+
+.brandSwiper {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.brandSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandSwiper img {
+  max-width: 120px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.brandSwiper img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .brandSwiper img {
+    max-width: 80px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .brandSwiper img {
+    max-width: 60px;
+  }
+}
+
+
+.promo-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* RIGHT INFO */
+.promo-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.subtext {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ITEMS */
+.promo-item-premium {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  /* border-radius: 12px; */
+  transition: 0.3s;
+}
+
+.promo-item-premium:hover {
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transform: translateX(5px);
+}
+
+.icon-box {
+  width: 45px;
+  height: 45px;
+  /* background: linear-gradient(45deg, #ff9900, #ff6600); */
+  /* background: linear-gradient(to bottom, #62cff4, #2c67f2); */
+  /* background: linear-gradient(to bottom, #2980B9, #6DD5FA, #FFFFFF); */
+  /* background: linear-gradient(180deg, #87CEEB 0%, #E0FFFF 100%); */
+  background: linear-gradient(to right, #00B4DB, #0083B0);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+
+/* Default: hidden */
+.scroll-animate {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.7s ease-out;
+}
+
+/* Saat aktif */
+.scroll-animate.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Delay bertahap */
+.scroll-animate:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.scroll-animate:nth-child(2) {
+  transition-delay: 0.25s;
+}
+
+.scroll-animate:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+.scroll-animate:nth-child(4) {
+  transition-delay: 0.55s;
+}
+
+.scroll-animate:nth-child(5) {
+  transition-delay: 0.7s;
+}

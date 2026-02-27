@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        .siupkk-sales {
+            padding: 90px 20px;
+            background: linear-gradient(135deg, #f4f8fc, #e9f1f8);
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .sales-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        /* LEFT */
+        .label {
+            background: #003c78;
+            color: #fff;
+            padding: 6px 15px;
+            border-radius: 50px;
+            font-size: 12px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .sales-left h1 {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .sales-left h1 span {
+            color: #ff8800;
+        }
+
+        .subtitle {
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .benefits {
+            margin-bottom: 35px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 15px;
+        }
+
+        .benefit-item i {
+            color: #ff8800;
+            margin-right: 10px;
+        }
+
+        .btn-primary-sales {
+            display: inline-block;
+            padding: 14px 30px;
+            background: linear-gradient(45deg, #ff8800, #ff5500);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary-sales:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(255, 85, 0, 0.3);
+        }
+
+        /* RIGHT */
+        .card-service {
+            background: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            margin-bottom: 25px;
+            transition: 0.3s;
+        }
+
+        .card-service:hover {
+            transform: translateY(-8px);
+        }
+
+        .card-service h3 {
+            margin-bottom: 25px;
+        }
+
+        .service-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .service-item i {
+            font-size: 22px;
+            color: #003c78;
+            margin-top: 5px;
+        }
+
+        .service-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .service-item p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .bonus-card {
+            background: linear-gradient(45deg, #003c78, #0056a6);
+            color: #fff;
+            padding: 25px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .sales-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .benefit-item {
+                justify-content: center;
+            }
+
+            .service-item {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="siupkk-sales">
+        <div class="container">
+
+            <div class="sales-grid">
+
+                <!-- LEFT CONTENT -->
+                <div class="sales-left">
+
+                    <span class="label">LEGALITAS RESMI & TERPERCAYA</span>
+
+                    <h1>Urus <span>SIUPKK</span> Lebih Mudah & Cepat</h1>
+
+                    <p class="subtitle">
+                        Jangan biarkan proses perizinan menghambat bisnis keagenan kapal Anda.
+                        Kami bantu proses SIUPKK secara profesional, lengkap, dan sesuai regulasi terbaru.
+                    </p>
+
+                    <div class="benefits">
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Proses Dibantu Tim Berpengalaman</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Dokumen Lengkap & Terarah</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Minim Revisi & Risiko Penolakan</span>
+                        </div>
+
+                        <div class="benefit-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Pendampingan Sampai Terbit</span>
+                        </div>
+
+                    </div>
+
+                    <a href="#" class="btn-primary-sales">
+                        Konsultasi Sekarang
+                    </a>
+
+                </div>
+
+                <!-- RIGHT CONTENT -->
+                <div class="sales-right">
+
+                    <div class="card-service">
+                        <h3>Layanan SIUPKK Kami</h3>
+
+                        <div class="service-item">
+                            <i class="fas fa-ship"></i>
+                            <div>
+                                <h4>Pembuatan SIUPKK Baru</h4>
+                                <p>Pengurusan lengkap dari awal hingga terbit resmi.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item">
+                            <i class="fas fa-file-signature"></i>
+                            <div>
+                                <h4>Endorsement SIUPKK</h4>
+                                <p>Pembaruan dan penyesuaian izin sesuai kebutuhan usaha.</p>
+                            </div>
+                        </div>
+
+                        <div class="service-item">
+                            <i class="fas fa-building"></i>
+                            <div>
+                                <h4>Pembukaan Cabang SIUPKK</h4>
+                                <p>Legalitas cabang perusahaan keagenan kapal Anda.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bonus-card">
+                        <h3>Bonus Eksklusif</h3>
+                        <p>Dapatkan fasilitas sistem manajemen untuk mendukung kredibilitas perusahaan Anda.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
