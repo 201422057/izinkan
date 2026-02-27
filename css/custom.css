@@ -161,7 +161,7 @@ body {
   position: relative;
   z-index: 3;
 
-  background: url("/images/slider/bg/1.jpg") center / cover no-repeat;
+  /* background: url("/images/slider/bg/1.jpg") center / cover no-repeat; */
 }
 
 .content-box-space {
