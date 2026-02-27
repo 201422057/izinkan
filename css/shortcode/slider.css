@@ -68,15 +68,19 @@
     margin: 23px auto auto;
     width: 57%;
 }
-.slider__btn {
-    margin-top: 40px;
-}
+
+
+
+
+
+
+
 .htc__btn {
     background: #fcc236 none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
     font-family: Raleway;
-    font-size: 18px;
+    /* font-size: 18px; */
     font-weight: 700;
     height: 45px;
     line-height: 45px;

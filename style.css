@@ -999,6 +999,7 @@ About 2
 
 .newsletter__wrap {
     text-align: center;
+    padding: 0px;
 }
 .newsletter__wrap h2 {
     color: #1f2d30;

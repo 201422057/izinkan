@@ -50,18 +50,14 @@
         <div id="header" class="htc-header">
             <!-- Start Mainmenu Area -->
             <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-6 col-xs-7">
+                <div class="container-fluid">
+                    <div class="row hidden-xs hidden-sm">
+                        <div class="col-md-2 col-sm-6 col-xs-7 text-center">
                             <div class="logo">
                                 <a href="index.html">
                                     <img src="images/logo/logo-izinkan.png" alt="logo image">
                                 </a>
                             </div>
-                        </div>
-                        <!-- Mobile Center Title -->
-                        <div class="mobile-title visible-xs visible-sm">
-                            IZINKAN
                         </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
@@ -91,41 +87,41 @@
                                     <li><a href="kontak.html">KONTAK</a></li>
                                 </ul>
                             </nav>
-                            <div class="mobile-menu clearfix visible-xs visible-sm">
-                                <nav id="mobile_dropdown">
-                                    <ul>
-                                        <li><a href="index.html">BERANDA</a></li>
-                                        <li><a href="about.html">TENTANG KAMI</a></li>
-                                        <li><a href="layanan.html">LAYANAN</a>
-                                            <ul>
-                                                <li><a href="pendirian.html">Pendirian PT / CV</a></li>
-                                                <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan
-                                                        Usaha
-                                                        Jasa
-                                                        Konstruksi)</a></li>
-                                                <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
-                                                <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
-                                                <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
-                                                <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
-                                                <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
-                                                <li><a href="iso.html">ISO (International Organization for
-                                                        Standardization)</a></li>
-                                                <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit
-                                                        Keuangan
-                                                        (AKP)</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="artikel.html">ARTIKEL</a></li>
-                                        <li><a href="kontak.html">KONTAK</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
                         <div class="col-md-2 col-sm-6 hidden-xs">
                             <div class="htc__header__search">
-                                <input type="text" placeholder="PENCARIAN">
-                                <a href="#"><i class="fa fa-search"></i></a>
+                                <form action="https://www.google.com/search" method="get" class="search-underline">
+                                    <input type="hidden" name="sitesearch" value="izinkan.id">
+
+                                    <i class="fa fa-search"></i>
+                                    <input type="text" name="q" placeholder="Cari..." aria-label="Cari di website">
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row visible-xs visible-sm">
+                        <div class="col-xs-12">
+                            <div class="mobile-header-row">
+                                <div class="col-xs-4">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="images/logo/logo-izinkan.png" alt="logo image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="mobile-title">
+                                        IZINKAN
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <button class="mobile-menu-toggle" aria-label="Buka Menu">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -403,42 +399,60 @@
         <!-- End Blog Area -->
         <!-- Start Newsletter Area -->
         <section class="htc__newsletter__area ptb--90 bg__gray">
-            <div class="container">
+            <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-md-12 col-xs-12">
                         <div class="newsletter__wrap">
-                            <h2 class="title__line">UPDATE <span class="text--theme">LEGALITAS</span></h2>
-                            <h4>Dapatkan info terbaru seputar regulasi dan sertifikasi langsung di email Anda.</h4>
+                            <h2 class="title__line">
+                                UPDATE <span class="text--theme">LEGALITAS</span>
+                            </h2>
+                            <h4>
+                                Dapatkan info terbaru seputar regulasi dan sertifikasi langsung di email Anda.
+                            </h4>
+
                             <div class="newsletter__form">
                                 <div class="input__box">
-                                    <div id="mc_embed_signup">
-                                        <form action="#" method="post" id="mc-embedded-subscribe-form"
-                                            name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                                            novalidate>
-                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
-                                                <div class="news__input">
-                                                    <input type="email" value="" name="EMAIL" class="email"
-                                                        id="mce-EMAIL" placeholder="Alamat Email" required>
-                                                </div>
-                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                    <input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
-                                                        tabindex="-1" value="">
-                                                </div>
-                                                <div class="clearfix subscribe__btn"><input type="submit"
-                                                        value="DAFTAR SEKARANG" name="subscribe"
-                                                        id="mc-embedded-subscribe" class="bst__btn btn--white__color">
 
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    <!-- FORM GOOGLE -->
+                                    <form id="newsletterForm"
+                                        action="https://docs.google.com/forms/d/e/1FAIpQLScM6DBPbwpMwVTk1yBg1ndrzM-KUGipLadkMFsFu6iwqnml8w/formResponse"
+                                        method="post" target="hidden_iframe" onsubmit="submitted=true;"
+                                        class="htc__news__inner">
+
+                                        <div class="news__input">
+                                            <input type="email" name="entry.440283715" placeholder="Alamat Email"
+                                                required>
+                                        </div>
+
+                                        <!-- anti bot -->
+                                        <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                                            <input type="text" tabindex="-1">
+                                        </div>
+
+                                        <button type="submit" class="bst__btn btn--white__color">
+                                            DAFTAR
+                                        </button>
+
+                                        <!-- Pesan sukses / error -->
+                                        <div id="msg-success" style="display:none; color:green; margin-top:10px;">
+                                            Terima kasih! Email Anda berhasil dikirim.
+                                        </div>
+                                        <div id="msg-error" style="display:none; color:red; margin-top:10px;">
+                                            Terjadi kesalahan. Silakan coba lagi.
+                                        </div>
+                                    </form>
+                                    <!-- END FORM -->
+
+                                    <!-- Hidden iframe untuk submit -->
+                                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="newsletter__thumb">
                 <div class="newsletter__thumb__inner">
                     <img src="images/others/1.png" alt="newsletter img">
@@ -469,7 +483,7 @@
                                     <i class="fa fa-globe" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">info@izinkan.id</a></p>
+                                    <p><a href="#">infoizinkan@gmail.com</a></p>
                                     <p><a href="#">www.izinkan.id</a></p>
                                 </div>
                             </div>
@@ -480,7 +494,7 @@
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">(62) 082298105257</a></p>
+                                    <p><a href="#">082298105257</a></p>
                                     <!-- <p><a href="#">(001) 65897 569 784</a></p> -->
                                 </div>
                             </div>
@@ -598,6 +612,37 @@
     </div>
     <!-- Body main wrapper end -->
 
+    <div class="mobile-menu visible-xs visible-sm">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">BERANDA</a></li>
+                <li><a href="about.html">TENTANG KAMI</a></li>
+                <li>
+                    <a href="layanan.html">LAYANAN</a>
+                    <ul>
+                        <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                        <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan Usaha
+                                Jasa
+                                Konstruksi)</a></li>
+                        <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                        <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                        <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                        <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                        <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                        <li><a href="iso.html">ISO (International Organization for
+                                Standardization)</a></li>
+                        <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit Keuangan
+                                (AKP)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="artikel.html">ARTIKEL</a></li>
+                <li><a href="kontak.html">KONTAK</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-overlay"></div>
+
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->
@@ -612,6 +657,57 @@
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-overlay');
+            const menuLinks = document.querySelectorAll('.mobile-nav a');
+
+            if (!toggle || !menu || !overlay) {
+                console.warn('Mobile menu element tidak lengkap');
+                return;
+            }
+
+            const openMenu = function () {
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeMenu = function () {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            toggle.addEventListener('click', function () {
+                if (menu.classList.contains('active')) {
+                    closeMenu();
+                    return;
+                }
+
+                openMenu();
+            });
+
+            overlay.addEventListener('click', function () {
+                closeMenu();
+            });
+
+            menuLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    closeMenu();
+                });
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
 
     <a href="https://wa.me/6282298105257?text=Halo%20IZINKAN,%20saya%20ingin%20konsultasi%20SERTIFIKAT."
         class="cs-float" target="_blank">

@@ -223,6 +223,10 @@
             color: #555;
         }
 
+        .single__mission .share-btn .fa {
+            color: white;
+        }
+
         .share-btn {
             text-decoration: none;
             padding: 5px 8px;
@@ -426,18 +430,14 @@
         <div id="header" class="htc-header">
             <!-- Start Mainmenu Area -->
             <div id="sticky-header-with-topbar" class="mainmenu__wrap sticky__header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-2 col-sm-6 col-xs-7">
+                <div class="container-fluid">
+                    <div class="row hidden-xs hidden-sm">
+                        <div class="col-md-2 col-sm-6 col-xs-7 text-center">
                             <div class="logo">
                                 <a href="index.html">
                                     <img src="images/logo/logo-izinkan.png" alt="logo image">
                                 </a>
                             </div>
-                        </div>
-                        <!-- Mobile Center Title -->
-                        <div class="mobile-title visible-xs visible-sm">
-                            IZINKAN
                         </div>
                         <div class="col-md-8 col-sm-6 col-xs-5">
                             <nav class="main__menu__nav  hidden-xs hidden-sm">
@@ -467,41 +467,41 @@
                                     <li><a href="kontak.html">KONTAK</a></li>
                                 </ul>
                             </nav>
-                            <div class="mobile-menu clearfix visible-xs visible-sm">
-                                <nav id="mobile_dropdown">
-                                    <ul>
-                                        <li><a href="index.html">BERANDA</a></li>
-                                        <li><a href="about.html">TENTANG KAMI</a></li>
-                                        <li><a href="layanan.html">LAYANAN</a>
-                                            <ul>
-                                                <li><a href="pendirian.html">Pendirian PT / CV</a></li>
-                                                <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan
-                                                        Usaha
-                                                        Jasa
-                                                        Konstruksi)</a></li>
-                                                <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
-                                                <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
-                                                <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
-                                                <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
-                                                <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
-                                                <li><a href="iso.html">ISO (International Organization for
-                                                        Standardization)</a></li>
-                                                <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit
-                                                        Keuangan
-                                                        (AKP)</a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="artikel.html">ARTIKEL</a></li>
-                                        <li><a href="kontak.html">KONTAK</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
                         </div>
                         <div class="col-md-2 col-sm-6 hidden-xs">
                             <div class="htc__header__search">
-                                <input type="text" placeholder="PENCARIAN">
-                                <a href="#"><i class="fa fa-search"></i></a>
+                                <form action="https://www.google.com/search" method="get" class="search-underline">
+                                    <input type="hidden" name="sitesearch" value="izinkan.id">
+
+                                    <i class="fa fa-search"></i>
+                                    <input type="text" name="q" placeholder="Cari..." aria-label="Cari di website">
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row visible-xs visible-sm">
+                        <div class="col-xs-12">
+                            <div class="mobile-header-row">
+                                <div class="col-xs-4">
+                                    <div class="logo">
+                                        <a href="index.html">
+                                            <img src="images/logo/logo-izinkan.png" alt="logo image">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="mobile-title">
+                                        IZINKAN
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 text-right">
+                                    <button class="mobile-menu-toggle" aria-label="Buka Menu">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -575,7 +575,7 @@
         <!-- End Offer Area -->
         <!-- Start Service Area -->
         <section class="htc__service__area service__page bg__gray ptb--100">
-            <div class="container">
+            <div class="container-fluid p-0">
                 <div class="row">
                     <div class="col-xs-12">
                         <div class="section__title text-center">
@@ -596,14 +596,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Paket SBU Jasa Konstruksi</h3>
                                         <p>
@@ -631,14 +650,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Paket SBU Konsultan Konstruksi</h3>
                                         <p>
@@ -660,9 +698,7 @@
 
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="sbu-kelistrikan.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="sbu-kelistrikan.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
@@ -675,14 +711,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Pembuatan Dokumen SMAP (Sistem Manajemen Anti Penyuapan)</h3>
                                         <p>Butuh Dokumen SMAP untuk SBU Konstruksi?</p>
@@ -701,23 +756,42 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <!-- </div>
 
-                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12">
+                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12"> -->
                             <div class="card">
                                 <div class="card-image">
                                     <img src="images/service/skk-depan.jpg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Sertifikasi SKK kontruksi</h3>
                                         <p>
@@ -741,9 +815,7 @@
                                         </p>
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="skk.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="skk.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
@@ -755,14 +827,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Pendirian Badan Usaha CV dan PT</h3>
                                         <p>
@@ -792,9 +883,7 @@
                                         <p>Gak perlu ribet, semua urusannya tinggal serahin ke Izinkan!</p>
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="pendirian.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="pendirian.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
@@ -806,14 +895,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Paket Ahli K3 Umum</h3>
 
@@ -836,31 +944,48 @@
                                         </p>
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="ahli-k3-umum.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="ahli-k3-umum.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                            <!-- </div>
 
-                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12">
+                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12"> -->
                             <div class="card">
                                 <div class="card-image">
                                     <img src="images/service/iso.jpg" alt="">
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Sertifikasi ISO Akreditasi dan Non Akreditasi</h3>
                                         <p>
@@ -892,14 +1017,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>SBU Kelistrikan / SBU JPTL</h3>
 
@@ -923,9 +1067,7 @@
                                         </p>
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="sbu-kelistrikan.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="sbu-kelistrikan.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
@@ -937,14 +1079,33 @@
                                 </div>
                                 <div class="card-body">
                                     <div class="single__mission">
-                                        <div class="share">
-                                            <span>Bagikan:</span>
-                                            <a href="#" class="share-btn wa" data-platform="whatsapp">WA</a>
-                                            <a href="#" class="share-btn fb" data-platform="facebook">FB</a>
-                                            <a href="#" class="share-btn tw" data-platform="twitter">X</a>
-                                            <a href="#" class="share-btn li" data-platform="linkedin">IN</a>
-                                            <a href="#" class="share-btn tg" data-platform="telegram">TG</a>
-                                            <a href="#" class="share-btn cp" data-platform="copy">⧉</a>
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
                                         </div>
                                         <h3>Serkom Kelistrikan</h3>
 
@@ -968,25 +1129,217 @@
                                         </p>
                                     </div>
                                     <div class="hubungi">
-                                        <a class="htc__btn"
-                                            href="serkom-kelistrikan.html"
-                                            target="_blank">
+                                        <a class="htc__btn" href="serkom-kelistrikan.html" target="_blank">
                                             Selengkapnya
                                         </a>
                                     </div>
                                 </div>
                             </div>
+                            <!-- </div>
+
+                        <div class="cards col-md-12 col-lg-12 col-sm-6 col-xs-12"> -->
+
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="images/service/1-smk3.jpg" alt="Sertifikasi SMK3">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+
+                                        <h3>Paket Sertifikasi SMK3 Perusahaan</h3>
+
+                                        <p>
+                                            Pendampingan lengkap penerapan dan sertifikasi Sistem Manajemen
+                                            Keselamatan dan Kesehatan Kerja (SMK3) sesuai PP No. 50 Tahun 2012.
+                                        </p>
+
+                                        <ul>
+                                            <li>Gap Analysis & Assessment Awal</li>
+                                            <li>Penyusunan Dokumen SMK3</li>
+                                            <li>Implementasi & Pelatihan Internal</li>
+                                            <li>Pendampingan Audit Sertifikasi</li>
+                                        </ul>
+
+                                        <p>
+                                            Cocok untuk perusahaan yang ingin memenuhi regulasi K3
+                                            dan meningkatkan standar keselamatan kerja secara sistematis.
+                                        </p>
+                                    </div>
+
+                                    <div class="hubungi">
+                                        <a class="htc__btn" href="smk3-perusahaan.html" target="_blank">
+                                            Selengkapnya
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- <div class="card">
+                                <div class="card-image">
+                                    <img src="images/service/2-smk3.png" alt="Audit SMK3">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+
+                                        <h3>Paket Audit & Evaluasi SMK3</h3>
+
+                                        <p>
+                                            Layanan audit internal untuk memastikan sistem SMK3
+                                            berjalan efektif sebelum menghadapi audit eksternal.
+                                        </p>
+
+                                        <ul>
+                                            <li>Review Dokumen & Prosedur K3</li>
+                                            <li>Evaluasi Implementasi Lapangan</li>
+                                            <li>Identifikasi Ketidaksesuaian (NC)</li>
+                                            <li>Rekomendasi Perbaikan Sistem</li>
+                                        </ul>
+
+                                        <p>
+                                            Membantu perusahaan mempersiapkan audit sertifikasi
+                                            dengan lebih percaya diri dan minim temuan.
+                                        </p>
+                                    </div>
+
+                                    <div class="hubungi">
+                                        <a class="htc__btn" href="audit-smk3.html" target="_blank">
+                                            Selengkapnya
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> -->
+
+                            <!-- <div class="card">
+                                <div class="card-image">
+                                    <img src="images/service/3-smk3.png" alt="Dokumen SMK3">
+                                </div>
+                                <div class="card-body">
+                                    <div class="single__mission">
+                                        <div class="as4-share">
+
+                                            <div class="as4-label">Bagikan</div>
+
+                                            <a href="#" class="as4-btn as4-wa" data-platform="whatsapp">
+                                                <i class="fa fa-whatsapp"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-fb">
+                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tw" data-platform="twitter">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-li" data-platform="linkedin">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-tg" data-platform="telegram">
+                                                <i class="fa fa-telegram"></i>
+                                            </a>
+
+                                            <a href="#" class="as4-btn as4-cp" data-platform="copy">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+
+                                        <h3>Penyusunan Dokumen SMK3</h3>
+
+                                        <p>
+                                            Penyusunan lengkap dokumen kebijakan, prosedur, dan
+                                            instruksi kerja sesuai standar SMK3.
+                                        </p>
+
+                                        <ul>
+                                            <li>Kebijakan & Sasaran K3</li>
+                                            <li>HIRADC / Identifikasi Risiko</li>
+                                            <li>Prosedur & Instruksi Kerja</li>
+                                            <li>Formulir & Rekaman K3</li>
+                                        </ul>
+
+                                        <p>
+                                            Disusun sesuai kebutuhan perusahaan dan siap digunakan
+                                            untuk implementasi maupun audit sertifikasi.
+                                        </p>
+                                    </div>
+
+                                    <div class="hubungi">
+                                        <a class="htc__btn" href="dokumen-smk3.html" target="_blank">
+                                            Selengkapnya
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> -->
+
                         </div>
+
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-xs-12 text-center">
                     <button id="loadMore" class="htc__btn" style="margin-top: 20px;">
                         Tampilkan Lebih Banyak
                     </button>
                 </div>
-            </div>
+            </div> -->
         </section>
         <!-- End Service Area -->
         <!-- Start Testimonial Area -->
@@ -1003,133 +1356,229 @@
                                     kualitas dan kepercayaan yang kami bangun.</p>
                             </div>
                             <div class="testimonial__activation clearfix">
-                                <!-- Start Single Testimonial -->
+
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                        <img src="images/test/client/2.jpg" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
-                                        <p>"Layanan cepat dan profesional. Tim sangat responsif dan sangat
-                                            direkomendasikan!"</p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, PT. Maju Sejahtera</h4>
+                                        <p>"Layanan sangat profesional. Tim memberikan solusi yang jelas dan tepat,
+                                            sehingga
+                                            kami bisa mendapatkan sertifikasi dengan lancar."</p>
+                                        <h2><a href="#">CEO, CV. Kreatif Solusi</a></h2>
                                     </div>
                                 </div>
-                                <!-- End Single Testimonial -->
-                                <!-- Start Single Testimonial -->
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                        <img src="images/test/client/3.jpg" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
-                                        <p>"Proses sertifikasi jadi mudah berkat pendampingan tim ini. Jelas, tepat
-                                            waktu, dan terpercaya."</p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, CV. Kreatif Solusi</h4>
+                                        <p>"Proses legalitas perusahaan kami berjalan dengan sangat efisien berkat tim
+                                            yang
+                                            sangat kompeten dan responsif."</p>
+                                        <h2><a href="#">CEO, PT. Sukses Mandiri</a></h2>
                                     </div>
                                 </div>
-                                <!-- End Single Testimonial -->
-                                <!-- Start Single Testimonial -->
+
                                 <div class="testimonial">
                                     <div class="testimonial__thumb">
-                                        <img src="images/test/client/1.jpg" alt="clint image">
+                                        <img src="images/test/client/4.jpg" alt="clint image">
                                     </div>
                                     <div class="testimonial__details">
                                         <div class="tes__icon">
                                             <i class="fa fa-quote-right"></i>
                                         </div>
-                                        <p>"Sangat puas dengan layanan mereka. Ramah, jelas, dan selalu siap menjawab
-                                            pertanyaan kami."</p>
-                                        <h2><a href="#">Ken Williams</a></h2>
-                                        <h4>CEO, PT. Sukses Mandiri</h4>
+                                        <p>"Tim yang sangat membantu dalam proses sertifikasi. Mereka sangat memahami
+                                            kebutuhan bisnis kami."</p>
+                                        <h2><a href="#">CEO, PT. Innovasi Mandiri</a></h2>
                                     </div>
                                 </div>
-                                <!-- End Single Testimonial -->
+
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/5.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Kami merasa aman dan nyaman dengan bantuan tim dalam proses mendapatkan
+                                            sertifikasi. Terpercaya dan profesional."</p>
+                                        <h2><a href="#">CEO, PT. Global Industri</a></h2>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/6.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Layanan yang diberikan sangat responsif dan tepat waktu. Sertifikasi yang
+                                            kami
+                                            peroleh meningkatkan kredibilitas perusahaan kami."</p>
+                                        <h2><a href="#">CEO, PT. Abadi Sejahtera</a></h2>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/7.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Sertifikasi yang kami dapatkan adalah hasil kerja keras tim yang selalu
+                                            memberikan dukungan. Proses yang sangat terstruktur."</p>
+                                        <h2><a href="#">CEO, CV. Mandiri Karya</a></h2>
+                                    </div>
+                                </div>
+
+                                <div class="testimonial">
+                                    <div class="testimonial__thumb">
+                                        <img src="images/test/client/8.jpg" alt="clint image">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <div class="tes__icon">
+                                            <i class="fa fa-quote-right"></i>
+                                        </div>
+                                        <p>"Sangat puas dengan kualitas layanan mereka. Profesionalisme yang tinggi
+                                            dalam
+                                            membantu kami mendapatkan sertifikasi dan legalitas."</p>
+                                        <h2><a href="#">CEO, PT. Sumber Berkah</a></h2>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
-                        <div class="reguest__quote">
+                    <div class="col-md-6 col-lg-6  col-lg-offset-1 col-sm-12 col-xs-12 smt-40">
+                        <!-- <div class="reguest__quote"> -->
+                        <div class="mitra-section">
                             <div class="section__title text-left">
-                                <h2 class="title__line">PERMINTAAN <span class="text--theme">PENAWARAN</span></h2>
+                                <h2 class="title__line">MITRA <span class="text--theme">KAMI</span></h2>
                                 <p>
-                                    Konsultasikan kebutuhan sertifikasi dan legalitas usaha Anda bersama IZINKAN.
-                                    Tim kami siap memberikan solusi terbaik sesuai kebutuhan bisnis Anda.
+                                    Izinkan.id berkolaborasi dengan lembaga resmi nasional untuk memastikan
+                                    setiap proses sertifikasi dan legalitas perusahaan berjalan sah, cepat,
+                                    dan sesuai regulasi pemerintah Indonesia.
                                 </p>
                             </div>
-                            <form id="contact-form"
-                                action="https://d29u17ylf1ylz9.cloudfront.net/simply-construction/mail-faq.php"
-                                method="post">
-                                <div class="clint__comment__form">
-                                    <div class="single__cl__form">
-                                        <input name="name" type="text" placeholder="Nama">
-                                        <input name="email" type="email" placeholder="Email">
+
+                            <div class="mitra-grid">
+
+                                <a href="https://kemnaker.go.id" target="_blank" class="mitra-card">
+                                    <img src="images/partner/partner-1.jpg" alt="Kemnaker">
+                                    <div class="mitra-overlay">
+                                        <h4>Kemnaker RI</h4>
+                                        <p>Legalitas & Sertifikasi SMK3 Resmi</p>
                                     </div>
-                                    <div class="single__cl__form">
-                                        <input name="telephone" type="tel" placeholder="Phone/ WA">
-                                        <input name="subject" type="text" placeholder="Subjek">
+                                </a>
+
+                                <a href="https://lpjk.pu.go.id" target="_blank" class="mitra-card">
+                                    <img src="images/partner/partner-2.jpg" alt="LPJK">
+                                    <div class="mitra-overlay">
+                                        <h4>LPJK</h4>
+                                        <p>Sertifikasi Badan Usaha Konstruksi</p>
                                     </div>
-                                    <div class="single__cl__message">
-                                        <textarea name="message" placeholder="Pesan"></textarea>
+                                </a>
+
+                                <a href="https://bnsp.go.id" target="_blank" class="mitra-card">
+                                    <img src="images/partner/partner-3.jpg" alt="BNSP">
+                                    <div class="mitra-overlay">
+                                        <h4>BNSP</h4>
+                                        <p>Sertifikasi Kompetensi Resmi</p>
                                     </div>
-                                    <div class="clint__submit__btn">
-                                        <button class="submit htc__btn" type="submit">
-                                            KIRIM PESAN
-                                        </button>
+                                </a>
+
+                                <a href="https://gatrik.esdm.go.id" target="_blank" class="mitra-card">
+                                    <img src="images/partner/partner-4.jpg" alt="DJK ESDM">
+                                    <div class="mitra-overlay">
+                                        <h4>DJK ESDM</h4>
+                                        <p>Perizinan & Sertifikasi Ketenagalistrikan</p>
                                     </div>
-                                </div>
-                            </form>
-                            <p class="form-messege"></p>
+                                </a>
+
+                                <a href="#" class="mitra-card">
+                                    <img src="images/partner/partner-5.jpg" alt="P3SM">
+                                    <div class="mitra-overlay">
+                                        <h4>P3SM</h4>
+                                        <p>Pengembangan Sistem Manajemen K3</p>
+                                    </div>
+                                </a>
+
+                            </div>
                         </div>
-                    </div> -->
+                        <!-- </div> -->
+                    </div>
                 </div>
             </div>
         </section>
         <!-- End Testimonial Area -->
         <!-- Start Newsletter Area -->
         <section class="htc__newsletter__area ptb--90 bg__gray">
-            <div class="container">
+            <div class="container-fluid p-0">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-md-12 col-xs-12">
                         <div class="newsletter__wrap">
-                            <h2 class="title__line">UPDATE <span class="text--theme">LEGALITAS</span></h2>
-                            <h4>Dapatkan info terbaru seputar regulasi dan sertifikasi langsung di email Anda.</h4>
+                            <h2 class="title__line">
+                                UPDATE <span class="text--theme">LEGALITAS</span>
+                            </h2>
+                            <h4>
+                                Dapatkan info terbaru seputar regulasi dan sertifikasi langsung di email Anda.
+                            </h4>
+
                             <div class="newsletter__form">
                                 <div class="input__box">
-                                    <div id="mc_embed_signup">
-                                        <form action="#" method="post" id="mc-embedded-subscribe-form"
-                                            name="mc-embedded-subscribe-form" class="validate" target="_blank"
-                                            novalidate>
-                                            <div id="mc_embed_signup_scroll" class="htc__news__inner">
-                                                <div class="news__input">
-                                                    <input type="email" value="" name="EMAIL" class="email"
-                                                        id="mce-EMAIL" placeholder="Alamat Email" required>
-                                                </div>
-                                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                                <div style="position: absolute; left: -5000px;" aria-hidden="true">
-                                                    <input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef"
-                                                        tabindex="-1" value="">
-                                                </div>
-                                                <div class="clearfix subscribe__btn"><input type="submit"
-                                                        value="DAFTAR SEKARANG" name="subscribe"
-                                                        id="mc-embedded-subscribe" class="bst__btn btn--white__color">
 
-                                                </div>
-                                            </div>
-                                        </form>
-                                    </div>
+                                    <!-- FORM GOOGLE -->
+                                    <form id="newsletterForm"
+                                        action="https://docs.google.com/forms/d/e/1FAIpQLScM6DBPbwpMwVTk1yBg1ndrzM-KUGipLadkMFsFu6iwqnml8w/formResponse"
+                                        method="post" target="hidden_iframe" onsubmit="submitted=true;"
+                                        class="htc__news__inner">
+
+                                        <div class="news__input">
+                                            <input type="email" name="entry.440283715" placeholder="Alamat Email"
+                                                required>
+                                        </div>
+
+                                        <!-- anti bot -->
+                                        <div style="position:absolute; left:-5000px;" aria-hidden="true">
+                                            <input type="text" tabindex="-1">
+                                        </div>
+
+                                        <button type="submit" class="bst__btn btn--white__color">
+                                            DAFTAR
+                                        </button>
+
+                                        <!-- Pesan sukses / error -->
+                                        <div id="msg-success" style="display:none; color:green; margin-top:10px;">
+                                            Terima kasih! Email Anda berhasil dikirim.
+                                        </div>
+                                        <div id="msg-error" style="display:none; color:red; margin-top:10px;">
+                                            Terjadi kesalahan. Silakan coba lagi.
+                                        </div>
+                                    </form>
+                                    <!-- END FORM -->
+
+                                    <!-- Hidden iframe untuk submit -->
+                                    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
             <div class="newsletter__thumb">
                 <div class="newsletter__thumb__inner">
                     <img src="images/others/1.png" alt="newsletter img">
@@ -1160,7 +1609,7 @@
                                     <i class="fa fa-globe" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">info@izinkan.id</a></p>
+                                    <p><a href="#">infoizinkan@gmail.com</a></p>
                                     <p><a href="#">www.izinkan.id</a></p>
                                 </div>
                             </div>
@@ -1171,7 +1620,7 @@
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                 </div>
                                 <div class="ht__address__details">
-                                    <p><a href="#">(62) 082298105257</a></p>
+                                    <p><a href="#">082298105257</a></p>
                                     <!-- <p><a href="#">(001) 65897 569 784</a></p> -->
                                 </div>
                             </div>
@@ -1289,22 +1738,53 @@
     </div>
     <!-- Body main wrapper end -->
 
+    <div class="mobile-menu visible-xs visible-sm">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">BERANDA</a></li>
+                <li><a href="about.html">TENTANG KAMI</a></li>
+                <li>
+                    <a href="layanan.html">LAYANAN</a>
+                    <ul>
+                        <li><a href="pendirian.html">Pendirian PT / CV</a></li>
+                        <li><a href="sbu-sertifikat-badan-usaha.html">SBUJK (Sertifikat Badan Usaha
+                                Jasa
+                                Konstruksi)</a></li>
+                        <li><a href="sbu-kelistrikan.html">SBU Kelistrikan (SBUJPTL)</a></li>
+                        <li><a href="skk.html">SKK (Sertifikat Kompetensi Kerja)</a></li>
+                        <li><a href="serkom-kelistrikan.html">Serkom Kelistrikan</a></li>
+                        <li><a href="smk3-perusahaan.html">SMK3 Perusahaan</a></li>
+                        <li><a href="ahli-k3-umum.html">Ahli K3 Umum</a></li>
+                        <li><a href="iso.html">ISO (International Organization for
+                                Standardization)</a></li>
+                        <li><a href="akuntan-publik.html">Akuntan Publik / Laporan Audit Keuangan
+                                (AKP)</a>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="artikel.html">ARTIKEL</a></li>
+                <li><a href="kontak.html">KONTAK</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="mobile-overlay"></div>
+
     <!-- Placed js at the end of the document so the pages load faster -->
 
     <!-- jquery latest version -->
     <script src="js/vendor/jquery-1.12.0.min.js"></script>
     <!-- Bootstrap framework js -->
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
     <!-- All js plugins included in this file. -->
     <script src="js/plugins.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
+    <!-- <script src="js/slick.min.js"></script> -->
+    <!-- <script src="js/owl.carousel.min.js"></script> -->
     <!-- Waypoints.min.js. -->
     <script src="js/waypoints.min.js"></script>
     <!-- Main js file that contents all jQuery plugins activation. -->
     <script src="js/main.js"></script>
 
-    <script>
+    <!-- <script>
         document.addEventListener("DOMContentLoaded", function () {
 
             const cards = document.querySelectorAll(".card");
@@ -1360,6 +1840,93 @@
 
             // tampilkan awal
             showInitial();
+
+        });
+    </script> -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const menu = document.querySelector('.mobile-menu');
+            const overlay = document.querySelector('.mobile-overlay');
+            const menuLinks = document.querySelectorAll('.mobile-nav a');
+
+            if (!toggle || !menu || !overlay) {
+                console.warn('Mobile menu element tidak lengkap');
+                return;
+            }
+
+            const openMenu = function () {
+                menu.classList.add('active');
+                overlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            };
+
+            const closeMenu = function () {
+                menu.classList.remove('active');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            };
+
+            toggle.addEventListener('click', function () {
+                if (menu.classList.contains('active')) {
+                    closeMenu();
+                    return;
+                }
+
+                openMenu();
+            });
+
+            overlay.addEventListener('click', function () {
+                closeMenu();
+            });
+
+            menuLinks.forEach(function (link) {
+                link.addEventListener('click', function () {
+                    closeMenu();
+                });
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeMenu();
+                }
+            });
+        });
+    </script>
+
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Owl (untuk slider utama) -->
+    <script src="js/owl.carousel.min.js"></script>
+
+    <!-- Slick (untuk testimonial) -->
+    <script src="js/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            // ====== Owl untuk slider utama ======
+            $('.slider__activation__wrap').owlCarousel({
+                items: 1,
+                loop: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                nav: true,
+                dots: true
+            });
+
+            // ====== Slick untuk testimonial ======
+            $('.testimonial__activation').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                arrows: false,
+                dots: true,
+                adaptiveHeight: true
+            });
 
         });
     </script>
