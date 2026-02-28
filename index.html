@@ -193,6 +193,11 @@
             flex-direction: column;
         }
 
+        #siupkk {
+            width: 550px;
+            max-width: 100%;
+        }
+
         .card:hover {
             transform: translateY(-8px);
         }
@@ -463,6 +468,10 @@
                 /* full width */
                 margin: 10px 0;
                 /* jarak atas-bawah saja */
+            }
+
+            #siupkk {
+                width: 100%;
             }
 
             .why__list li {
@@ -902,7 +911,7 @@
                                 </div>
                                 <div class="col-xs-4">
                                     <div class="mobile-title">
-                                        IZINKAN
+                                        <!-- IZINKAN -->
                                     </div>
                                 </div>
                                 <div class="col-xs-4 text-right">
@@ -1306,7 +1315,7 @@
 
                         <!-- CARD 1 : SIUPKK -->
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="card" id="siupkk" style="width: 550px;">
+                            <div class="card" id="siupkk">
 
                                 <div class="card-image">
                                     <img src="images/service/siupkk.jpg" alt="Promo SIUPKK">
@@ -1384,14 +1393,14 @@
                                         </div>
                                         <div>
                                             <h4>PROSES SIUPKK TERLARIS</h4>
-                                            <div class="bonus-box">
+                                            <!-- <div class="bonus-box"> -->
                                                 <h2>FREE 1 PAKET</h2>
-                                                <ul>
-                                                    <li><strong>ISO 9001</strong> – Sistem Manajemen Mutu</li>
-                                                    <li><strong>ISO 14001</strong> – Sistem Manajemen Lingkungan</li>
-                                                    <li><strong>ISO 45001</strong> – Sistem Manajemen K3</li>
-                                                </ul>
-                                            </div>
+                                                <!-- <ul> -->
+                                                    <p><strong>ISO 9001</strong> – Sistem Manajemen Mutu</p>
+                                                    <p><strong>ISO 14001</strong> – Sistem Manajemen Lingkungan</p>
+                                                    <p><strong>ISO 45001</strong> – Sistem Manajemen K3</p>
+                                                <!-- </ul> -->
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -1489,8 +1498,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -1548,8 +1557,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -1611,8 +1620,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -1673,8 +1682,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -1737,8 +1746,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -1807,8 +1816,8 @@
                                                 <i class="fa fa-whatsapp"></i>
                                             </a>
 
-                                            <a href="#" class="as4-btn as4-fb">
-                                                <i class="fa fa-facebook" data-platform="facebook"></i>
+                                            <a href="#" class="as4-btn as4-fb" data-platform="facebook">
+                                                <i class="fa fa-facebook"></i>
                                             </a>
 
                                             <a href="#" class="as4-btn as4-tw" data-platform="twitter">
@@ -2892,45 +2901,57 @@
                 e.preventDefault();
 
                 const card = this.closest('.card');
+                if (!card) return;
+
+                const platform = this.dataset.platform || this.querySelector('[data-platform]')?.dataset.platform;
+                if (!platform) return;
+
                 const title = card.querySelector('h3').innerText;
                 const desc = card.querySelector('p').innerText;
-                const cardUrl = window.location.origin + window.location.pathname + '#' + card.id;
                 const text = `${title} - ${desc}`;
-
-                // Mendapatkan URL gambar dari card
-                const cardImage = card.querySelector('img') ? card.querySelector('img').src : '';
+                const sharePages = {
+                    'siupkk': 'share/siupkk.html',
+                    'sbujk': 'share/sbujk.html',
+                    'sbujk-1': 'share/sbujk-1.html',
+                    'iso': 'share/iso.html',
+                    'skk': 'share/skk.html',
+                    'pt-cv': 'share/pt-cv.html',
+                    'akuntan': 'share/akuntan.html'
+                };
+                const shareUrlForPreview = sharePages[card.id]
+                    ? new URL(sharePages[card.id], window.location.href).toString()
+                    : (window.location.origin + window.location.pathname + '#' + card.id);
 
                 let shareUrl = '';
 
-                switch (this.dataset.platform) {
+                switch (platform) {
                     case 'whatsapp':
-                        shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + cardUrl)}`;
+                        shareUrl = `https://wa.me/?text=${encodeURIComponent(text + ' ' + shareUrlForPreview)}`;
                         break;
 
                     case 'facebook':
-                        // Menambahkan parameter picture untuk berbagi gambar di Facebook
-                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(cardUrl)}&picture=${encodeURIComponent(cardImage)}`;
+                        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrlForPreview)}`;
                         break;
 
                     case 'twitter':
-                        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(cardUrl)}`;
+                        shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(shareUrlForPreview)}`;
                         break;
 
                     case 'linkedin':
-                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(cardUrl)}`;
+                        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrlForPreview)}`;
                         break;
 
                     case 'telegram':
-                        shareUrl = `https://t.me/share/url?url=${encodeURIComponent(cardUrl)}&text=${encodeURIComponent(text)}`;
+                        shareUrl = `https://t.me/share/url?url=${encodeURIComponent(shareUrlForPreview)}&text=${encodeURIComponent(text)}`;
                         break;
 
                     case 'copy':
-                        navigator.clipboard.writeText(cardUrl);
+                        navigator.clipboard.writeText(shareUrlForPreview);
                         alert('Link card berhasil disalin!');
                         return;
                 }
 
-                window.open(shareUrl, '_blank');
+                window.open(shareUrl, '_blank', 'noopener,noreferrer');
             });
         });
     </script>

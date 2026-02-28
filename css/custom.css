@@ -901,6 +901,8 @@ body {
 .icon-box {
   width: 45px;
   height: 45px;
+  min-width: 45px;
+  min-height: 45px;
   /* background: linear-gradient(45deg, #ff9900, #ff6600); */
   /* background: linear-gradient(to bottom, #62cff4, #2c67f2); */
   /* background: linear-gradient(to bottom, #2980B9, #6DD5FA, #FFFFFF); */
@@ -912,7 +914,18 @@ body {
   justify-content: center;
   border-radius: 12px;
   font-size: 18px;
+
+  flex-shrink: 0;
+  /* 🔥 PENTING: cegah mengecil */
 }
+
+/* .icon-box {
+  width: 45px;
+  height: 45px;
+  min-width: 45px;
+  min-height: 45px;  
+  flex-shrink: 0;   
+} */
 
 
 /* Default: hidden */
@@ -947,4 +960,33 @@ body {
 
 .scroll-animate:nth-child(5) {
   transition-delay: 0.7s;
+}
+
+@media (max-width: 768px) {
+  .promo-item-premium {
+    align-items: flex-start;
+    padding: 12px;
+  }
+
+  .icon-box {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    font-size: 16px;
+    border-radius: 10px;
+  }
+
+  .promo-item-premium h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+  }
+
+  .promo-item-premium p {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .promo-info{
+    margin-top: 20px;
+  }
 }
