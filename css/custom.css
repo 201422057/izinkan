@@ -1171,3 +1171,94 @@ body {
   opacity: 0.6;
   cursor: not-allowed;
 }
+
+
+
+
+
+.alur-layanan{
+padding:70px 20px;
+background:#fff;
+}
+
+.alur-wrapper{
+position:relative;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:40px;
+text-align:center;
+align-items:center;
+}
+
+/* garis tengah */
+.alur-wrapper::before{
+content:"";
+position:absolute;
+top:50px;
+left:5%;
+width:90%;
+height:4px;
+
+background:linear-gradient(
+to right,
+#1e73be,
+#1e73be,
+#2ecc71,
+#e53935,
+#e53935
+);
+
+z-index:0;
+}
+
+/* item */
+.alur-item{
+position:relative;
+z-index:2;
+}
+
+.icon{
+background:#fff;
+padding:15px;
+border-radius:50%;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+display:inline-block;
+}
+
+.icon img{
+width:60px;
+height:auto;
+}
+
+.alur-item h3{
+margin-top:12px;
+font-size:18px;
+}
+
+.alur-item p{
+font-size:14px;
+color:#666;
+}
+
+/* tablet */
+@media(max-width:900px){
+
+.alur-wrapper{
+grid-template-columns:repeat(3,1fr);
+}
+
+.alur-wrapper::before{
+display:none;
+}
+
+}
+
+/* mobile */
+@media(max-width:600px){
+
+.alur-wrapper{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+}
