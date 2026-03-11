@@ -845,6 +845,21 @@
     <!-- Body main wrapper start -->
     <div class="wrapper">
 
+        <!-- POPUP VIDEO -->
+        <div id="videoPopup" class="video-popup">
+            <div class="video-box">
+
+                <video id="popupVideo" autoplay muted playsinline>
+                    <source src="./video/bukamas.mp4" type="video/mp4">
+                </video>
+
+                <button id="skipBtn" onclick="closeVideoPopup()" disabled>
+                    Lewati Video (5)
+                </button>
+
+            </div>
+        </div>
+
         <!-- Start Header Style -->
         <div id="header" class="htc-header">
             <!-- Start Mainmenu Area -->
@@ -1904,32 +1919,32 @@
                                         </div>
                                         <h3>CPKB, CPPOB & CPPKRTB untuk Izin Edar Produk</h3>
 
-                                            <p><i class="fa fa-check-square-o"></i>Gap Analysis</p>
-                                            <p>Analisis kesiapan perusahaan sebelum proses sertifikasi</p>
+                                        <p><i class="fa fa-check-square-o"></i>Gap Analysis</p>
+                                        <p>Analisis kesiapan perusahaan sebelum proses sertifikasi</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Layout & Facility Drawing</p>
-                                            <p>Pembuatan desain layout fasilitas produksi sesuai standar</p>
+                                        <p><i class="fa fa-check-square-o"></i>Layout & Facility Drawing</p>
+                                        <p>Pembuatan desain layout fasilitas produksi sesuai standar</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>SOP & Manual Development</p>
-                                            <p>Penyusunan SOP dan dokumen sistem yang dibutuhkan</p>
+                                        <p><i class="fa fa-check-square-o"></i>SOP & Manual Development</p>
+                                        <p>Penyusunan SOP dan dokumen sistem yang dibutuhkan</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Internal Training</p>
-                                            <p>Pelatihan internal untuk tim perusahaan</p>
+                                        <p><i class="fa fa-check-square-o"></i>Internal Training</p>
+                                        <p>Pelatihan internal untuk tim perusahaan</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>System Implementation</p>
-                                            <p>Pendampingan implementasi sistem di perusahaan</p>
+                                        <p><i class="fa fa-check-square-o"></i>System Implementation</p>
+                                        <p>Pendampingan implementasi sistem di perusahaan</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Audit Assistance</p>
-                                            <p>Pendampingan selama proses audit berlangsung</p>
+                                        <p><i class="fa fa-check-square-o"></i>Audit Assistance</p>
+                                        <p>Pendampingan selama proses audit berlangsung</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Corrective Action</p>
-                                            <p>Perbaikan dan penyelesaian temuan audit</p>
+                                        <p><i class="fa fa-check-square-o"></i>Corrective Action</p>
+                                        <p>Perbaikan dan penyelesaian temuan audit</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Account Registration</p>
-                                            <p>Pendaftaran akun untuk proses izin edar</p>
+                                        <p><i class="fa fa-check-square-o"></i>Account Registration</p>
+                                        <p>Pendaftaran akun untuk proses izin edar</p>
 
-                                            <p><i class="fa fa-check-square-o"></i>Product Registration</p>
-                                            <p>Pendampingan proses pendaftaran produk hingga terdaftar</p>
+                                        <p><i class="fa fa-check-square-o"></i>Product Registration</p>
+                                        <p>Pendampingan proses pendaftaran produk hingga terdaftar</p>
 
 
                                     </div>
@@ -3412,6 +3427,57 @@
             });
             return false;
         }
+    </script>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            if (!localStorage.getItem("popupVideoShown")) {
+
+                let popup = document.getElementById("videoPopup");
+                let video = document.getElementById("popupVideo");
+                let skipBtn = document.getElementById("skipBtn");
+
+                popup.style.display = "flex";
+                video.play();
+
+                localStorage.setItem("popupVideoShown", "true");
+
+                let countdown = 5;
+
+                let timer = setInterval(function () {
+
+                    countdown--;
+
+                    skipBtn.textContent = "Lewati Video (" + countdown + ")";
+
+                    if (countdown <= 0) {
+                        clearInterval(timer);
+                        skipBtn.textContent = "Lewati Video";
+                        skipBtn.disabled = false;
+                    }
+
+                }, 1000);
+
+                video.onended = function () {
+                    closeVideoPopup();
+                };
+
+            }
+
+        });
+
+        function closeVideoPopup() {
+
+            let popup = document.getElementById("videoPopup");
+            let video = document.getElementById("popupVideo");
+
+            video.pause();
+            popup.style.display = "none";
+
+        }
+
     </script>
 
     <!-- ============================= -->
