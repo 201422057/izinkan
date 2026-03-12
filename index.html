@@ -3201,9 +3201,16 @@
                     'cpkb': 'share/cpkb.html',
                     'akuntan': 'share/akuntan.html'
                 };
-                const shareUrlForPreview = sharePages[card.id]
-                    ? new URL(sharePages[card.id], window.location.href).toString()
-                    : (window.location.origin + window.location.pathname + '#' + card.id);
+                let shareUrlForPreview = sharePages[card.id]
+                    ? new URL(sharePages[card.id], window.location.href)
+                    : new URL(window.location.origin + window.location.pathname + '#' + card.id);
+
+                if (sharePages[card.id]) {
+                    // Cache-buster for social preview (Facebook/WhatsApp, etc.)
+                    shareUrlForPreview.searchParams.set('v', Date.now().toString());
+                }
+
+                shareUrlForPreview = shareUrlForPreview.toString();
 
                 let shareUrl = '';
 
