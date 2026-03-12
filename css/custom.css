@@ -1728,3 +1728,37 @@ gap:30px;
     margin-top: 20px;
   }
 } */
+
+
+
+
+.mission-list{
+  margin-top:20px;
+}
+
+.mission-item{
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  /* margin-bottom:14px; */
+}
+
+.mission-item i{
+  color:#2bb673;
+  font-size:18px;
+  /* margin-top:3px; */
+  min-width:18px;
+}
+
+.mission-item strong{
+  display:block;
+  font-weight:600;
+  /* margin-bottom:3px; */
+}
+
+.mission-item p{
+  margin:0;
+  color:#555;
+  font-size:14px;
+  line-height:1.5;
+}
